@@ -1,4 +1,4 @@
----
+Ôªø---
 layout: archive
 title: "CV"
 permalink: /cv/
@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* M.S. in Computer Science, Universit· degli Studi di Udine, 2017
-* B.S. in Computer Science, Universit· degli Studi di Udine, 2015
+* M.S. in Computer Science, Universit√° degli Studi di Udine, 2017
+* B.S. in Computer Science, Universit√° degli Studi di Udine, 2015
 * Scientific High School diploma, Liceo Scientifico "N. Copernico", Udine, 2011
 
 Work experience

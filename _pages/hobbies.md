@@ -1,4 +1,4 @@
----
+﻿---
 permalink: /
 title: "Hobbies & Trivia"
 author_profile: true

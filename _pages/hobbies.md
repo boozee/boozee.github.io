@@ -1,6 +1,6 @@
 ﻿---
-permalink: /
 title: "Hobbies & Trivia"
+permalink: /hobbies/
 author_profile: true
 redirect_from: 
   - /hobbies/

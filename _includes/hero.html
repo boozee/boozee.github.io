@@ -1,0 +1,19 @@
+<section class="hero">
+  <div class="grid grid-2">
+    <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+      <div>
+        <h1>Hello there, I'm {{ site.data.cv.name }}</h1>
+        <p class="muted">{{ site.data.cv.role }} · {{ site.data.cv.location }}</p>
+        <p>{{ site.data.cv.summary }}</p>
+
+        <div>
+          {% for s in site.data.cv.skills_summary %}
+            <span class="badge">{{ s }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% include contact-card.html %}
+  </div>
+</section>

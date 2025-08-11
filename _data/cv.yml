@@ -1,9 +1,9 @@
 name: Andrea
-role: Software Engineer
-location: Vimodrone, Italy
-email: andrea@example.com
+role: Tech Lead - Senior Software Engineer
+location: Vimodrone (MI), Italy
+email: andrea.burti.3@gmail.com
 summary: >
-  Software Engineer with experience in React, Three.js, Unreal Engine, and C++.
+  Senior Software Engineer with experience in 3D Graphics, Game Engines and 
   Passionate about building performant UIs and game systems.
 experience:
   - company: Caracol AM
@@ -20,17 +20,27 @@ experience:
     bullets:
       - Implemented game loop systems and state persistence in C++ and Blueprints.
 education:
-  - school: Politecnico di Milano
-    degree: M.Sc. Computer Science (example)
-    year: 2020
+  - school: Liceo Scientifico N. Copernico (Udine)
+    year: 2011
+  - school: University of Udine (Udine)
+    title: Bsc. in Computer Science (3 years)
+    year: 2015
+  - school: University of Udine (Udine)
+    title: Msc. in Computer Science (2 years)
+    year: 2017
 links:
   - label: GitHub
-    url: https://github.com/your-handle
+    url: https://github.com/boozee
   - label: LinkedIn
-    url: https://www.linkedin.com/in/your-handle
+    url: https://www.linkedin.com/in/andrea-burti-0393a395/
 skills_summary:
-  - JavaScript/TypeScript
-  - React
   - Unreal Engine (C++)
+  - Unity Engine (C#)
   - Three.js
-  - Docker
+  - Android (Java)
+  - XR Development
+languages:
+  - C++
+  - C# & .NET
+  - Java
+  - Javascript

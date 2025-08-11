@@ -1,0 +1,21 @@
+<div class="card contact-card">
+  <img
+    src="{{ site.baseurl }}/assets/img/profile.png"
+    alt="Photo of {{ site.data.cv.name }}"
+    class="profile-img" />
+
+  <h3>Contact</h3>
+  <table class="table">
+    <tr>
+      <th>Email</th>
+      <td><a href="mailto:{{ site.data.cv.email }}">{{ site.data.cv.email }}</a></td>
+    </tr>
+
+    {% for link in site.data.cv.links %}
+    <tr>
+      <th>{{ link.label }}</th>
+      <td><a href="{{ link.url }}">{{ link.url }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

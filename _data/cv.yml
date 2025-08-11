@@ -1,0 +1,36 @@
+name: Andrea
+role: Software Engineer
+location: Vimodrone, Italy
+email: andrea@example.com
+summary: >
+  Software Engineer with experience in React, Three.js, Unreal Engine, and C++.
+  Passionate about building performant UIs and game systems.
+experience:
+  - company: Caracol AM
+    role: Tech Lead
+    start: 2024-03
+    end: present
+    bullets:
+      - Led development of HMI features integrating Weintek JS SDK.
+      - Mentored a team and improved delivery throughput.
+  - company: Example Games Studio
+    role: Unreal Engine Developer
+    start: 2021-03
+    end: 2024-02
+    bullets:
+      - Implemented game loop systems and state persistence in C++ and Blueprints.
+education:
+  - school: Politecnico di Milano
+    degree: M.Sc. Computer Science (example)
+    year: 2020
+links:
+  - label: GitHub
+    url: https://github.com/your-handle
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/your-handle
+skills_summary:
+  - JavaScript/TypeScript
+  - React
+  - Unreal Engine (C++)
+  - Three.js
+  - Docker

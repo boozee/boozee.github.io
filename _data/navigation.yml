@@ -1,13 +1,10 @@
-﻿# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-
-main:
-    
-  - title: "CV"
-    url: /cv/
-    
-  - title: "Hobbies & Trivia"
-    url: /hobbies/
+- title: Home
+  url: "/"
+- title: CV
+  url: "/cv/"
+- title: Skills
+  url: "/skills/"
+- title: Projects
+  url: "/projects/"
+- title: Hobbies
+  url: "/hobbies/"

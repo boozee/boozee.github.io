@@ -1,0 +1,8 @@
+- category: Languages
+  items: [JavaScript, TypeScript, C++, C#, Python]
+- category: Frontend
+  items: [React, Vite, Zustand, Three.js, WebGL]
+- category: Backend/DevOps
+  items: [Node.js, Docker, GitHub Actions]
+- category: Tools
+  items: [Jira, EasyBuilder Pro, VSCode]

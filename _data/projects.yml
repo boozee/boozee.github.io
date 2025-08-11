@@ -1,0 +1,12 @@
+- name: Path Visualizer
+  description: 3D visualization of toolpaths with Three.js, featuring custom geometric primitives.
+  tags: [Three.js, React, WebGL]
+  link: https://example.com/path-visualizer
+  repo: https://github.com/your-handle/path-visualizer
+- name: Unreal Game Loop
+  description: C++ Unreal Engine module for robust turn/phase game loops with snapshots.
+  tags: [Unreal, C++]
+  repo: https://github.com/your-handle/unreal-game-loop
+- name: HMI Recipe Viewer
+  description: Custom Weintek HMI JS Object for sortable, scrollable recipe data.
+  tags: [HMI, JavaScript]

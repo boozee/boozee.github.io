@@ -1,0 +1,13 @@
+<div class="card">
+  <h3 style="margin-top:0">{{ include.project.name }}</h3>
+  <p>{{ include.project.description }}</p>
+  <div>
+    {% for t in include.project.tags %}
+      <span class="badge">{{ t }}</span>
+    {% endfor %}
+  </div>
+  <div style="margin-top:10px">
+    {% if include.project.link %}<a href="{{ include.project.link }}" class="btn">Live</a>{% endif %}
+    {% if include.project.repo %}<a href="{{ include.project.repo }}" class="btn">Repo</a>{% endif %}
+  </div>
+</div>

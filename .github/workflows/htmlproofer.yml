@@ -1,0 +1,12 @@
+name: HTMLProofer
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-ruby@v1
+        with: { ruby-version: '3.2' }
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - run: gem install html-proofer && htmlproofer ./_site --disable_external

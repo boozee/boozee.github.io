@@ -161,3 +161,28 @@ hr{border:none;border-top:1px solid var(--border); margin:24px 0}
 .skip{position:absolute;left:-9999px;top:auto}
 .skip:focus{left:16px;top:12px;z-index:1000;background:var(--card);border:2px solid var(--brand);padding:8px 12px;border-radius:6px}
 :focus-visible{outline:3px solid color-mix(in oklab,var(--brand) 60%,var(--bg));outline-offset:2px}
+
+.badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; background:var(--bg-secondary); }
+.badge-outline { background:transparent; border:1px solid var(--border); }
+.chips { display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.5rem; }
+.stack { display:flex; flex-direction:column; gap:1rem; }
+.stack-md { gap:1.25rem; }
+
+.links a {
+  text-decoration: none;
+  color: var(--text);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.links a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}

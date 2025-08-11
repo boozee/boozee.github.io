@@ -1,0 +1,40 @@
+<div class="stack stack-md">
+  {% for exp in site.data.cv.experience %}
+  <div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+      <div>
+        <h3 style="margin:0;">{{ exp.role }}</h3>
+        <p class="muted" style="margin:2px 0 0 0;">
+          {% if exp.company_url %}
+          <a href="{{ exp.company_url | strip }}" target="_blank" rel="noopener noreferrer">
+            {{ exp.company }}
+          </a>
+          {% if exp.company_note %}<span class="muted"> — {{ exp.company_note }}</span>{% endif %}
+          {% else %}
+          {{ exp.company }}
+          {% endif %}
+        </p>
+      </div>
+      <div class="muted" style="white-space:nowrap;">
+        {{ exp.start }} — {{ exp.end }}
+      </div>
+    </div>
+
+    {% if exp.bullets %}
+    <ul class="list">
+      {% for b in exp.bullets %}
+      <li>{{ b }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if exp.tags %}
+    <div class="chips">
+      {% for t in exp.tags %}
+      <span class="badge">{{ t }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

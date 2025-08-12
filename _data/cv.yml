@@ -18,6 +18,18 @@ experience:
       - Mentor for a team of 10 developers, focusing on best practices and code quality.
       - Focused on the frontend development using Three.js and React.
       - Main developer of the Jira workflows.
+    technologies:
+      - C++ 17
+      - C#
+      - Javascript
+      - React
+      - Three.js
+      - Node.js
+      - Google Mock
+      - Easy Builder Pro
+      - Jira & Bitbucket
+      - Clipper Lib 2
+
   - company: Zuru Tech
     company_url: https://zuru.tech/
     where : Milan (MI), Italy
@@ -26,9 +38,17 @@ experience:
     end: 2024/05
     bullets:
       - Developer on the geometry-layer of a BIM within a vertically integrated building product.
-      - Led a team of 5 developers, ensuring timely delivery and high-quality code.
+      - Led a team of 7 developers, ensuring timely delivery and high-quality code.
       - Developed architectures and systems for real-time 3D applications using Unreal Engine.
       - Collaborated with cross-functional teams and Scrum figures to translate roadmaps into reality.
+      - Continuous improvement of the intra and inter-team processes, focusing on efficiency and transparency.
+    technologies:
+      - C++ 17
+      - Unreal Engine 5
+      - Google Mock
+      - GitLab
+      - Clipper Lib 2
+      
   - company: SPACE1 (OverIT)
     company_note: "Company was acquired by OverIT in 2021, website refers to the new company"
     company_url: https://www.indx.com/it/product/overit-space-1-it
@@ -38,9 +58,20 @@ experience:
     end: 2021/02
     bullets:
       - My first steps as a developer, where I learned the basics of Unity and C#.
-      - Led a team of 5 developers, ensuring timely delivery and high-quality code.
-      - Developed architectures and systems for real-time 3D applications using Unreal Engine.
-      - Collaborated with cross-functional teams and Scrum figures to translate roadmaps into reality.
+      - Part of a Scrum team, where I learned the importance of collaboration and agile methodologies.
+      - Analysis and development of B2B XR applications ranging digital twins, remote collaboration and simulation trainings.
+      - Focus on client-side UI, business logic and unit testing.
+      - Main developer for a custom Unreal Engine 4 DAM plugin.
+    technologies:
+      - Unity
+      - C#
+      - .NET 5/Core
+      - OpenXR
+      - Unreal Engine 4
+      - Zenject
+      - Azure DevOps
+      - Azure services
+
 education:
   - school: Liceo Scientifico N. Copernico (Udine)
     title: High School Diploma in Science - PNI
@@ -71,7 +102,6 @@ skills_summary:
   - Three.js
   - Android (Java)
   - XR Development
-languages:
   - C++
   - C# & .NET
   - Java

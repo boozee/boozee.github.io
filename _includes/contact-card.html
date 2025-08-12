@@ -2,27 +2,23 @@
   <img src="{{ site.baseurl }}/assets/img/profile.png" alt="Photo of {{ site.data.cv.name }}" class="profile-img" />
 
   <h3>Contact</h3>
-  <table class="table">
-    <tr>
-      <th>Email</th>
-      <td><a href="mailto:{{ site.data.cv.email }}">{{ site.data.cv.email }}</a></td>
-    </tr>
+  <div class="contact-icons">
+    <a href="mailto:{{ site.data.cv.email }}" aria-label="Email" title="{{ site.data.cv.email }}">
+      <svg width="22" height="22"><use href="#icon-email"></use></svg>
+    </a>
 
     {% for link in site.data.cv.links %}
-    {% comment %} Pretty display for long URLs {% endcomment %}
-    {% assign pretty = link.url
-    | replace: 'https://', ''
-    | replace: 'http://', ''
-    | replace: 'www.', '' %}
-
-    <tr>
-      <th>{{ link.label }}</th>
-      <td>
-        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
-          {{ pretty }}
-        </a>
-      </td>
-    </tr>
+      {% assign label = link.label | downcase %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ link.label }}" title="{{ link.label }}">
+        {% if label contains 'github' %}
+          <svg width="22" height="22"><use href="#icon-github"></use></svg>
+        {% elsif label contains 'linkedin' %}
+          <svg width="22" height="22"><use href="#icon-linkedin"></use></svg>
+        {% else %}
+          <svg width="22" height="22"><use href="#icon-link"></use></svg>
+        {% endif %}
+      </a>
     {% endfor %}
-  </table>
+  </div>
 </div>

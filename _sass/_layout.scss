@@ -98,3 +98,21 @@
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+.contact-icons {
+  display: flex;
+  gap: 0.8em;
+  margin-top: 0.5em;
+}
+
+.contact-icons a {
+  color: var(--brand);
+  line-height: 1;
+  /* tighter hitbox */
+  display: inline-flex;
+}
+
+.contact-icons a:hover {
+  color: var(--brand-strong);
+  transform: translateY(-1px);
+}

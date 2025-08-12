@@ -1,0 +1,28 @@
+/* ================================
+   View Transitions API (full-page)
+   ================================ */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) { animation: vt-fade .22s ease both; }
+  ::view-transition-new(root) { animation: vt-fade .22s ease both reverse; }
+
+  @keyframes vt-fade {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+}
+
+/* ================================
+   PJAX Fade (main content only)
+   ================================ */
+main#main { 
+  transition: opacity .18s ease;
+  opacity: 1;
+}
+
+body.pjax-out main#main {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main#main { transition: none; }
+}

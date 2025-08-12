@@ -74,16 +74,12 @@
 .contact-card .table {
   width: 100%;
   border-collapse: separate;
-  /* allow spacing without borders merging */
   border-spacing: 0 8px;
-  /* vertical breathing room */
 }
 
 .contact-card .table th {
   width: 7.5rem;
-  /* fixed label column */
   padding: 6px 12px 6px 0;
-  /* gap between label and value */
   vertical-align: top;
   text-align: left;
   color: var(--muted);
@@ -98,9 +94,7 @@
 
 .contact-card .table a {
   display: inline-block;
-  /* prevents “touching” the label edge */
   line-height: 1.4;
   overflow-wrap: anywhere;
-  /* wrap long URLs cleanly */
   word-break: break-word;
 }

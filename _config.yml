@@ -38,3 +38,7 @@ nav:
     url: "/projects/"
   - title: Hobbies
     url: "/hobbies/"
+
+# Allow Sass to be used
+sass:
+  style: compressed

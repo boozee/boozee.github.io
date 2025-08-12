@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card); cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+:root[data-theme="dark"] .btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+
+.btn-theme {
+  font-weight: 600; color: var(--fg);
+  background: linear-gradient(0deg, color-mix(in oklab, var(--card) 85%, transparent), var(--card));
+  border: 2px solid var(--border);
+  box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 1px 8px rgba(0,0,0,.06) inset;
+}
+.btn-theme .icon-theme { display: inline-block; }
+.btn-theme .icon-theme path { fill: currentColor; }
+.btn-theme:hover { transform: translateY(-1px); }
+.btn-theme:focus {
+  outline: 3px solid color-mix(in oklab, var(--brand) 60%, var(--bg));
+  outline-offset: 2px;
+}
+
+code, kbd {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0 6px;
+}

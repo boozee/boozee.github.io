@@ -1,0 +1,32 @@
+/* shared container */
+.chips { display: flex; flex-wrap: wrap; gap: .6rem .8rem; margin-top: .75rem; }
+
+/* shared base props */
+.badge, .tech-badge {
+  display: inline-block;
+  padding: .32rem .8rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* default badge (neutral blue) */
+.badge { background: #2563eb; color: #fff; }
+html[data-theme="light"] .badge { background: var(--brand-light); color: var(--brand-ink); }
+
+/* outline variant */
+.badge-outline { background: transparent; border: 1px solid var(--border); color: var(--fg); }
+
+/* tech badge (unified tone) */
+.tech-badge {
+  background: var(--brand-strong);
+  color: #fff;
+  border: 0;
+  font-weight: 600;
+}
+html[data-theme="light"] .tech-badge {
+  background: var(--brand-light);
+  color: var(--brand-ink);
+  border: 1px solid #93c5fd;
+}

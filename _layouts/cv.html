@@ -2,14 +2,15 @@
 layout: default
 ---
 
-<section>
-  {% include section-heading.html title="Experience" subtitle="What I’ve been up to" %}
+<div class="tabs">
+  <button class="tab-button active" data-tab="experience">Experience</button>
+  <button class="tab-button" data-tab="education">Education</button>
+</div>
+
+<div class="tab-content is-active" id="experience">
   {% include experience-list.html %}
-</section>
+</div>
 
-<hr/>
-
-<section>
-  {% include section-heading.html title="Education" subtitle="Where I studied" %}
+<div class="tab-content" id="education">
   {% include education-list.html %}
-</section>
+</div>

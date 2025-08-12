@@ -362,3 +362,21 @@ html[data-theme="light"] .tech-badge {
   color: #1e3a8a;
   border: 1px solid #93c5fd;
 }
+
+.tabs { display:flex; gap:2rem; border-bottom:1px solid var(--border); margin-bottom:1rem; }
+
+.tab-button {
+  background:none; border:none; color:var(--muted);
+  font-size:1.1rem; font-weight:500; padding:.5rem 0; cursor:pointer;
+  position:relative; transition:color .2s ease;
+}
+.tab-button:hover { color:var(--brand); }
+.tab-button.active { color:var(--brand); font-weight:600; }
+.tab-button::after {
+  content:""; position:absolute; left:0; bottom:-2px; height:3px; width:0;
+  background:var(--brand); border-radius:3px; transition:width .25s ease;
+}
+.tab-button.active::after { width:100%; }
+
+.tab-content { display:none; }
+.tab-content.is-active { display:block; }

@@ -7,21 +7,11 @@
         <p>{{ site.data.cv.summary }}</p>
 
         <!-- Skill highlights -->
-        <div style="margin-top:.5rem;">
+        <div class="chips">
           {% for s in site.data.cv.skills_summary %}
-            <span class="badge">{{ s }}</span>
+          <span class="badge tech-badge">{{ s }}</span>
           {% endfor %}
         </div>
-
-        <!-- Core languages (new) -->
-        {% if site.data.cv.languages %}
-        <div style="margin-top:.75rem;">
-          <strong>Languages:</strong>
-          {% for lang in site.data.cv.languages %}
-            <span class="badge badge-outline">{{ lang }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
       </div>
     </div>
 

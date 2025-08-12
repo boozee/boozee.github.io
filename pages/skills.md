@@ -11,7 +11,7 @@ permalink: /skills/
       <h3>{{ cat.category }}</h3>
       <div>
         {% for it in cat.items %}
-          <span class="badge">{{ it }}</span>
+          <span class="badge tech-badge">{{ it }}</span>
         {% endfor %}
       </div>
     </div>

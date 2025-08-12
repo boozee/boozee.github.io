@@ -28,10 +28,18 @@
     </ul>
     {% endif %}
 
+    {% if exp.technologies %}
+    <div class="chips">
+      {% for tech in exp.technologies %}
+      <span class="badge tech-badge">{{ tech }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     {% if exp.tags %}
     <div class="chips">
       {% for t in exp.tags %}
-      <span class="badge">{{ t }}</span>
+      <span class="badge tech-badge">{{ t }}</span>
       {% endfor %}
     </div>
     {% endif %}

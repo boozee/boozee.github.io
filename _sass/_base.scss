@@ -59,9 +59,14 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 .container { max-width: 960px; margin: 0 auto; padding: 24px; }
 .muted { color: var(--muted); }
 
-.header, .container, main, footer {
-  position: relative;
-  z-index: 1;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 :focus-visible {

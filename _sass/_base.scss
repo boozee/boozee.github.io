@@ -5,6 +5,7 @@ html {
   background: var(--bg);
   color: var(--fg);
   position: relative;
+  scrollbar-gutter: stable both-edges;
 }
 
 html::before {

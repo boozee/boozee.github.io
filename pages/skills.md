@@ -10,9 +10,11 @@ permalink: /skills/
     <div class="card">
       <h3>{{ cat.category }}</h3>
       <div>
+        <div class="chips">
         {% for it in cat.items %}
           <span class="badge tech-badge">{{ it }}</span>
         {% endfor %}
+        </div>
       </div>
     </div>
   {% endfor %}

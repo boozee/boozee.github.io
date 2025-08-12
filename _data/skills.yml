@@ -1,8 +1,32 @@
-- category: Languages
-  items: [JavaScript, TypeScript, C++, C#, Python]
-- category: Frontend
-  items: [React, Vite, Zustand, Three.js, WebGL]
-- category: Backend/DevOps
-  items: [Node.js, Docker, GitHub Actions]
-- category: Tools
-  items: [Jira, EasyBuilder Pro, VSCode]
+- category: Main Languages
+  items: [C++, C#, Javascript, Java, SQL]
+
+- category: Web
+  items: [React, Vite, Electron, Three.js, WebGL]
+
+- category: Web Services
+  items: [Azure]
+
+- category: DevOps
+  items: [Docker, GitHub Actions, GitLab Actions, Azure Devops]
+
+- category: Production Tools
+  items: [GitLab, Azure DevOps, Jira, Bitbucket, Confluence, EasyBuilder Pro]
+
+- category: Dev Tools
+  items: [Visual Studio, JetBrains Rider, Visual Studio Code, Git, Fork]
+
+- category: Game Engines
+  items: [Unreal Engine, Unity]
+
+- category: Platforms
+  items: [Windows, Android, Oculus Quest, HoloLens, HTC Vive, Realwear HMT-1]
+
+- category: Testing
+  items: [Google Mock, Zenject, Extenject]
+
+- category: IA
+  items: [GPT, Claude]
+
+- category: Other
+  items: [Git, LaTeX]

@@ -1,0 +1,107 @@
+<div id="music-player" class="music-player">
+  <!-- Minimized Player Bar -->
+  <div class="music-player-bar" id="music-player-bar">
+    <div class="music-player-info">
+      <div class="music-player-track">
+        <span id="current-track-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px; vertical-align: middle;">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          Songs That Inspire Me
+        </span>
+        <span id="current-track-artist"></span>
+      </div>
+    </div>
+    
+    <div class="music-player-controls">
+      <button id="prev-btn" class="music-btn" title="Previous">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+        </svg>
+      </button>
+      
+      <button id="play-pause-btn" class="music-btn music-btn-primary" title="Play/Pause">
+        <svg id="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+          <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+        </svg>
+        <svg id="loading-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+          <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z">
+            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </button>
+      
+      <button id="next-btn" class="music-btn" title="Next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="music-player-actions">
+      <button id="expand-btn" class="music-btn" title="Expand Playlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Expanded Playlist -->
+  <div class="music-player-playlist" id="music-player-playlist">
+    <div class="music-player-header">
+      <h3>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        Songs That Inspire Me
+      </h3>
+      <button id="collapse-btn" class="music-btn" title="Collapse">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="music-playlist-tracks">
+      {% for track in site.data.music.playlist %}
+      <div class="music-track" data-youtube-id="{{ track.youtube_id }}" data-index="{{ forloop.index0 }}">
+        <div class="music-track-info">
+          <div class="music-track-title">{{ track.title }}</div>
+          <div class="music-track-artist">{{ track.artist }}</div>
+          {% if track.album %}
+          <div class="music-track-album">{{ track.album }}</div>
+          {% endif %}
+        </div>
+        <button class="music-track-play music-btn" title="Play">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!-- Hidden YouTube Player -->
+  <div id="youtube-player-container" style="display: none;">
+    <div id="youtube-player"></div>
+  </div>
+</div>
+
+<!-- Playlist data will be loaded by the music player JavaScript -->
+<script type="application/json" id="music-playlist-data">
+[
+  {% for track in site.data.music.playlist %}
+  {
+    "title": {{ track.title | jsonify }},
+    "artist": {{ track.artist | jsonify }},
+    "youtubeId": {{ track.youtube_id | jsonify }},
+    "album": {{ track.album | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+</script>

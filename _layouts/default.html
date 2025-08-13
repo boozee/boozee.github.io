@@ -35,11 +35,13 @@
 	{% include icons.svg %}
 	<a href="#main" class="skip">Skip to content</a>
     {% include header.html %}
+    {% include music-player.html %}
     <main id="main" class="container">
       {{ content }}
     </main>
     {% include footer.html %}
 	<script src="{{ '/assets/js/tabs.js?v=' | append: site.github.build_revision }}"></script>
 	<script src="{{ site.baseurl }}/assets/js/main.js?v={{ site.github.build_revision }}"></script>
+	<script src="{{ site.baseurl }}/assets/js/music-player.js?v={{ site.github.build_revision }}"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="color-scheme" content="light dark">
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     {% seo %}
     <meta name="color-scheme" content="light dark">
 	  <script>
@@ -35,10 +36,10 @@
 	{% include icons.svg %}
 	<a href="#main" class="skip">Skip to content</a>
     {% include header.html %}
-    {% include music-player.html %}
     <main id="main" class="container">
       {{ content }}
     </main>
+    {% include bottom-bar.html %}
     {% include footer.html %}
 	<script src="{{ '/assets/js/tabs.js?v=' | append: site.github.build_revision }}"></script>
 	<script src="{{ site.baseurl }}/assets/js/main.js?v={{ site.github.build_revision }}"></script>

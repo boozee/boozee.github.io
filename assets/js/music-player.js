@@ -257,11 +257,13 @@ class MusicPlayer {
   expandPlaylist() {
     this.isExpanded = true;
     this.playlistElement.classList.add('expanded');
+    this.playerElement.classList.add('expanded'); // Add expanded class to parent
   }
   
   collapsePlaylist() {
     this.isExpanded = false;
     this.playlistElement.classList.remove('expanded');
+    this.playerElement.classList.remove('expanded'); // Remove expanded class from parent
   }
   
   playTrack(index) {
@@ -329,9 +331,21 @@ class MusicPlayer {
   updateCurrentTrackDisplay(track) {
     if (this.currentTitle) {
       this.currentTitle.textContent = track.title;
+      this.currentTitle.title = track.title; // Add tooltip
     }
     if (this.currentArtist) {
       this.currentArtist.textContent = track.artist;
+      this.currentArtist.title = track.artist; // Add tooltip
+    }
+
+    // Adjust vertical alignment if no artist is present
+    const musicPlayerTrack = document.querySelector('.music-player-track');
+    if (musicPlayerTrack) {
+      if (track.artist && track.artist.trim() !== '') {
+        musicPlayerTrack.classList.remove('no-artist');
+      } else {
+        musicPlayerTrack.classList.add('no-artist');
+      }
     }
   }
   

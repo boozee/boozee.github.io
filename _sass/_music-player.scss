@@ -1,9 +1,7 @@
 /* Music Player Styles */
 .music-player {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 9999;
+  /* No longer fixed, will be part of bottom-bar's flex layout */
+  position: relative; /* Added for absolute positioning of playlist */
   background: var(--bg, #ffffff);
   border: 1px solid var(--border, #e2e8f0);
   border-radius: 12px;
@@ -13,12 +11,16 @@
   opacity: 1;
   transform: translateY(0);
   transition: all 0.3s ease;
-  max-width: 400px;
-  min-width: 320px;
+  width: 360px; /* Fixed width to prevent size changes */
   
   &.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  &.expanded {
+    border-radius: 12px 12px 0 0; /* Remove bottom border-radius when expanded */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Remove shadow from the main player when expanded */
   }
 }
 
@@ -36,12 +38,20 @@
   min-height: 56px;
   background: var(--bg);
   border-radius: 12px;
+  
+  /* Adjust border-radius when playlist is expanded */
+  .music-player.expanded & {
+    border-radius: 0 0 12px 12px;
+  }
 }
 
 .music-player-info {
-  flex: 1;
-  min-width: 0;
+  width: 160px;
+  height: 42px; /* Keep fixed height */
   margin-right: 12px;
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Vertically center its content */
+  justify-content: left; /* Horizontally center its content (music-player-track) */
 }
 
 .music-player-track {
@@ -49,6 +59,21 @@
   flex-direction: column;
   gap: 2px;
   
+  &.no-artist {
+    /* music-player-info handles main centering, so music-player-track just needs to manage its children */
+    gap: 0; /* Remove gap when no artist is present */
+
+    #current-track-title {
+      margin: 0; /* Ensure no extra margins */
+      padding: 0; /* Ensure no extra padding */
+      transform: translateY(1px); /* Fine-tune vertical alignment: move down by 1px */
+    }
+
+    #current-track-artist {
+      display: none; /* Hide artist when no artist is present */
+    }
+  }
+
   #current-track-title {
     font-weight: 600;
     color: var(--fg);
@@ -72,6 +97,7 @@
   align-items: center;
   gap: 6px;
   margin-right: 8px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .music-btn {
@@ -109,17 +135,29 @@
 .music-player-actions {
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
+
+  .music-btn svg {
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+  }
 }
 
 .music-player-playlist {
+  position: absolute; /* Position above the bar */
+  bottom: 100%; /* Place it above the music-player-bar */
+  left: 0;
+  width: 100%;
   background: var(--bg);
-  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); /* Changed from border-top */
   max-height: 400px;
   overflow-y: auto;
-  display: none;
+  display: none; /* Revert to hidden by default */
+  z-index: 9999; /* Ensure it's above the bottom bar */
+  border-radius: 12px 12px 0 0; /* Rounded top corners */
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1); /* Adjusted shadow for upward expansion */
   
   &.expanded {
-    display: block;
+    display: block; /* Show when expanded */
   }
 }
 
@@ -209,6 +247,11 @@
   }
 }
 
+/* Rotate expand button when playlist is expanded */
+.music-player.expanded .music-player-actions #expand-btn svg {
+  transform: rotate(180deg);
+}
+
 /* Music toggle button in header */
 .music-toggle {
   background: transparent;
@@ -238,13 +281,11 @@
   }
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for music player within bottom bar */
 @media (max-width: 768px) {
   .music-player {
-    top: 12px;
-    right: 12px;
-    max-width: calc(100vw - 24px);
-    min-width: 280px;
+    max-width: 100%; /* Allow it to take full width of bottom bar container */
+    min-width: unset; /* Remove min-width constraint */
   }
   
   .music-player-bar {
@@ -252,33 +293,35 @@
     min-height: 52px;
   }
   
-  .music-player-info {
-    margin-right: 8px;
-  }
+.music-player-info {
+  width: 200px;
+  height: 42px; /* Keep fixed height */
+  margin-right: 12px;
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Vertically center its content */
+  justify-content: center; /* Horizontally center its content (music-player-track) */
+}
+
+.music-player-track {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   
-  .music-player-controls {
-    gap: 4px;
-    margin-right: 6px;
-  }
-  
-  .music-btn {
-    padding: 6px;
-  }
-  
-  .music-player-header,
-  .music-track {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  
-  .music-player-track {
+  &.no-artist {
+    /* Revert music-player-track to its original flex properties, as music-player-info handles main centering */
+    /* No need for display: flex, flex-direction: column, align-items, justify-content here */
+    gap: 0; /* Remove gap when no artist is present */
+
     #current-track-title {
-      font-size: 12px;
+      margin: 0; /* Ensure no extra margins */
+      padding: 0; /* Ensure no extra padding */
+      transform: translateY(-2px); /* Fine-tune vertical alignment */
     }
-    
+
     #current-track-artist {
-      font-size: 10px;
+      display: none; /* Hide artist when no artist is present */
     }
+  }
   }
 }
 

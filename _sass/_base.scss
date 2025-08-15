@@ -43,6 +43,13 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--fg);
   line-height: 1.6;
+  padding-bottom: 72px; /* Space for fixed bottom bar */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 120px; /* Adjust for smaller bottom bar height on mobile */
+  }
 }
 
 a { color: var(--brand); text-decoration: none; }

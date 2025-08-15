@@ -9,7 +9,7 @@
           <a href="{{ exp.company_url | strip }}" target="_blank" rel="noopener noreferrer">
             {{ exp.company }}
           </a>
-          {% if exp.company_note %}<span class="muted"> — {{ exp.company_note }}</span>{% endif %}
+          {% if exp.company_note %}<span> — {{ exp.company_note }}</span>{% endif %}
           {% else %}
           {{ exp.company }}
           {% endif %}

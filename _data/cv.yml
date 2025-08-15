@@ -54,7 +54,7 @@ experience:
       - Clipper Lib 2
       
   - company: SPACE1 (OverIT)
-    company_note: "Company was acquired by OverIT in 2021, website refers to the new company"
+    company_note: "Company was acquired by OverIT in 2021"
     company_url: https://www.indx.com/it/product/overit-space-1-it
     where: Udine, Italy
     role: Unity & .NET Software Developer
@@ -84,13 +84,13 @@ education:
     grades: 86/100
     year: 2011
   - school: University of Udine (Udine)
-    title: Bsc. in Computer Science (3 years)
+    title: BSc. in Computer Science (3 years)
     description: The bases of my knowledge, but also where I felt there was something deeper than typing buttons. 
     thesis: "Analysis and development of an analytics web module for a commercial/touristic platform"
     grades: 104/110
     year: 2015
   - school: University of Udine (Udine)
-    title: Msc. in Computer Science (2 years)
+    title: MSc. in Computer Science (2 years)
     description: Here I discovered 3D Graphics, Unreal Engine, the COmplexity theory and burnouts. But I'm glad I did it.
     thesis: "Efficient Computation of Object Visibility in 3D Scenes"
     grades: 110/110 cum laude

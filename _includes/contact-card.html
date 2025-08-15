@@ -20,5 +20,17 @@
         {% endif %}
       </a>
     {% endfor %}
+
+    {% for link in site.data.hobbies.links %}
+      {% assign label = link.label | downcase %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
+         aria-label="{{ link.label }}" title="{{ link.label }}">
+        {% if label contains 'spotify' %}
+          <svg width="22" height="22"><use href="#icon-spotify"></use></svg>
+        {% else %}
+          <svg width="22" height="22"><use href="#icon-link"></use></svg>
+        {% endif %}
+      </a>
+    {% endfor %}
   </div>
 </div>

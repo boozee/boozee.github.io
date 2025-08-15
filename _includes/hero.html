@@ -3,15 +3,12 @@
     <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
       <div>
         <h1>Hello there, I'm {{ site.data.cv.name }}</h1>
-        <p class="muted">{{ site.data.cv.role }} · {{ site.data.cv.location }}</p>
-        <p>{{ site.data.cv.summary }}</p>
-
-        <!-- Skill highlights -->
-        <div class="chips">
-          {% for s in site.data.cv.skills_summary %}
-          <span class="badge tech-badge">{{ s }}</span>
-          {% endfor %}
-        </div>
+        <p class="muted">Human Being</p>
+        <p class="lead" style="white-space: pre-line;">{{ site.data.cv.summary_human }}</p>
+        <div class="rule"></div>
+        <p class="muted">{{ site.data.cv.role1 }}</p>
+        <p class="muted">{{ site.data.cv.role2 }}</p>
+        <p class="lead" style="white-space: pre-line;">{{ site.data.cv.summary_career }}</p>
       </div>
     </div>
 

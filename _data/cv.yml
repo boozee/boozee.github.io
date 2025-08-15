@@ -1,11 +1,15 @@
 name: Andrea
-role: Tech Lead - Senior Software Engineer
+role1: Tech Lead
+role2: Senior Software Engineer
 location: Vimodrone (MI), Italy
 email: andrea.burti.3@gmail.com
-summary: >
-  Senior Software Engineer with experience in 3D Graphics, Game Engines and complex topics.
-  Passionate about mentoring and leading teams to deliver high-quality software solutions.
-  I'm curious about anything and challenging my beliefs is my daily bread.
+summary_human: >
+  I’m a curious and rational 33-year-old who believes growth comes from challenging your own ideas. I enjoy learning, exploring different viewpoints, and balancing technical thinking with empathy.
+summary_career: >
+  Senior Software Engineer with expertise in 3D Graphics, Game Engines, and visualization. I believe technical quality is the foundation of long-term success.
+
+
+  As a Tech Lead, I mentor teams to deliver robust, sustainable software while fostering collaboration and keeping the human side of development in focus.
 experience:
   - company: Caracol AM
     company_url: https://caracol-am.com/

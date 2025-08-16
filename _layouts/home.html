@@ -3,19 +3,3 @@ layout: default
 ---
 
 {% include hero.html %}
-
-<hr/>
-
-<section>
-  {% include section-heading.html title="Projects" subtitle="A few highlights" %}
-  <div class="grid grid-3">
-    {% assign featured = site.data.projects | where: "featured", true | slice: 3 %}
-    {% for p in featured %}
-      {% include card-project.html project=p %}
-    {% endfor %}
-  </div>
-
-  <div style="margin-top:1rem;">
-    <a class="btn" href="{{ site.baseurl }}/projects/">See all projects →</a>
-  </div>
-</section>

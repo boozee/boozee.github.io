@@ -71,6 +71,10 @@ hr {
   margin: 0.5rem 0 .25rem;
 }
 
+:root[data-theme="light"] .muted {
+  background: #acb8c655;
+}
+
 .lead {
   font-size: clamp(1.05rem, calc(0.35vw + 0.95rem), 1.2rem);
   line-height: 1.8;

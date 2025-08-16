@@ -1,0 +1,56 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .12), transparent);
+  margin: 0.75rem 0;
+}
+
+.section{
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+/* Spacing tune for mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: .75rem 1rem;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand) 60%, var(--bg));
+  outline-offset: 2px;
+}
+
+/* Skip link accessibility */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip:focus {
+  left: 16px;
+  top: 12px;
+  z-index: 1000;
+  background: var(--card);
+  border: 2px solid var(--brand);
+  padding: 8px 12px;
+  border-radius: 6px;
+}

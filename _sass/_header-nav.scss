@@ -21,6 +21,3 @@
 }
 .links a:hover { color: var(--brand); border-color: var(--brand); }
 .links a.active { color: var(--brand); border-color: var(--brand); font-weight: 600; }
-
-/* No longer need specific responsive adjustments for music player/theme switcher in header */
-/* Keep general responsive adjustments for navigation if needed */

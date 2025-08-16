@@ -52,6 +52,7 @@
       // re-init page scripts & nav
       document.dispatchEvent(new CustomEvent("pjax:ready"));
       highlightNav();
+      setupTabListeners(); // Reinitialize tab listeners
       window.scrollTo(0, 0);
 
       // 3) Fade in (next frame so opacity transition applies)

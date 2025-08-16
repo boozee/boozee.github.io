@@ -1,13 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOMContentLoaded fired for tabs.js');
+function setupTabListeners() {
   const buttons = [...document.querySelectorAll('.tab-button')];
   const panels  = [...document.querySelectorAll('.tab-content')];
-  console.log('Buttons found:', buttons.length);
-  console.log('Panels found:', panels.length);
   if (!buttons.length || !panels.length) return;
 
+  console.log('Tab listeners set up for buttons:', buttons.length); // Debugging log
+
   function activate(name) {
-    console.log('Activating tab:', name);
     buttons.forEach(b => b.classList.toggle('active', b.dataset.tab === name));
     panels.forEach(p => p.classList.toggle('is-active', p.id === name));
   }
@@ -15,8 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
   buttons.forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
-      console.log('Button clicked:', btn.dataset.tab);
+      console.log('Button clicked for tab:', btn.dataset.tab); // Debugging log
       activate(btn.dataset.tab);
     });
   });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOMContentLoaded fired for tabs.js');
+  setupTabListeners();
 });
+
+// Reinitialize tab listeners after PJAX content swap
+document.addEventListener('pjax:ready', setupTabListeners);

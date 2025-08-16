@@ -1,8 +1,8 @@
 .contact-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  align-items: center; /* Re-center main card elements */
+  gap: 8px; /* Reduced gap for better spacing */
   align-self: start; /* Prevent stretching in grid layout */
 }
 
@@ -27,6 +27,22 @@
   vertical-align: top;
 }
 
+.contact-card .personal-info {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-bottom: 0; /* Remove default margin */
+  line-height: 1.2; /* Adjust line height for compactness */
+  text-align: left; /* Ensure text is left-aligned within its container */
+}
+
+.contact-card .personal-details {
+  width: 100%; /* Allow it to take full width of card */
+  max-width: 250px; /* Constrain width to match image */
+  margin: 0 auto; /* Center the block */
+  text-align: left; /* Ensure content is left-aligned within this block */
+  padding: 0; /* Remove horizontal padding, rely on card padding */
+}
+
 .contact-card .table a {
   display: inline-block;
   line-height: 1.4;
@@ -34,20 +50,45 @@
   word-break: break-word;
 }
 
-.contact-icons {
-  display: flex;
-  gap: 0.8em;
-  margin-top: 0.5em;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+  gap: 1.5em; /* Increased gap for better spacing */
+  margin-top: 2em;
+  justify-items: center; /* Center items within their grid cells */
+  max-width: 600px; /* Constrain width for better readability */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-icons a {
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-item a {
   color: var(--brand);
   line-height: 1;
-  /* tighter hitbox */
   display: inline-flex;
+  margin-bottom: 0.5em; /* Space between icon and label */
 }
 
-.contact-icons a:hover {
+.social-item a:hover {
   color: var(--brand-strong);
   transform: translateY(-1px);
+}
+
+.social-label {
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.intro-text,
+.closing-text {
+  text-align: center;
+  max-width: 700px; /* Limit width for readability */
+  margin: 1em auto; /* Center and add vertical margin */
+  line-height: 1.6;
 }

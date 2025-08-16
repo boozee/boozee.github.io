@@ -2,35 +2,9 @@
   <img src="{{ site.baseurl }}/assets/img/profile.png" alt="Photo of {{ site.data.cv.name }}" class="profile-img" />
 
   <h3>Contact</h3>
-  <div class="contact-icons">
-    <a href="mailto:{{ site.data.cv.email }}" aria-label="Email" title="{{ site.data.cv.email }}">
-      <svg width="22" height="22"><use href="#icon-email"></use></svg>
-    </a>
-
-    {% for link in site.data.cv.links %}
-      {% assign label = link.label | downcase %}
-      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
-         aria-label="{{ link.label }}" title="{{ link.label }}">
-        {% if label contains 'github' %}
-          <svg width="22" height="22"><use href="#icon-github"></use></svg>
-        {% elsif label contains 'linkedin' %}
-          <svg width="22" height="22"><use href="#icon-linkedin"></use></svg>
-        {% else %}
-          <svg width="22" height="22"><use href="#icon-link"></use></svg>
-        {% endif %}
-      </a>
-    {% endfor %}
-
-    {% for link in site.data.hobbies.links %}
-      {% assign label = link.label | downcase %}
-      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
-         aria-label="{{ link.label }}" title="{{ link.label }}">
-        {% if label contains 'spotify' %}
-          <svg width="22" height="22"><use href="#icon-spotify"></use></svg>
-        {% else %}
-          <svg width="22" height="22"><use href="#icon-link"></use></svg>
-        {% endif %}
-      </a>
-    {% endfor %}
+  <div class="personal-details">
+    <p class="personal-info">Age: {{ site.data.cv.age }} years old</p>
+    <p class="personal-info">Location: {{ site.data.cv.location }}</p>
+    <p class="personal-info">Pronouns: {{ site.data.cv.pronouns }}</p>
   </div>
 </div>

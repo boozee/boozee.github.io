@@ -15,6 +15,10 @@ package-lock.json
 # Ignore VS files
 .vs
 
+# ────────────────
+# Jekyll
+# ────────────────
+
 # Jekyll
 .jekyll-cache/
 .jekyll-metadata
@@ -22,3 +26,18 @@ package-lock.json
 # Other
 vendor/
 .DS_Store
+
+
+# ────────────────
+# Cline (AI agent)
+# ────────────────
+
+# Local memory banks and state (should not be versioned)
+.cline/
+cline-memory.json
+cline-memory-*.json
+memory-bank/*
+
+# Logs, scratchpads, or temp files if present
+cline.log
+cline-temp/

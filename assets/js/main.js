@@ -83,4 +83,32 @@
   addEventListener("popstate", () => navigate(location.href, { push: false }));
 
   document.addEventListener("DOMContentLoaded", highlightNav);
+
+  // Card toggle for touch users
+  (() => {
+    const card = document.querySelector('.card');
+    if (!card) return; // Exit if card element is not found
+
+    const panel = card.querySelector('.card__panel');
+    const btn = card.querySelector('.card__toggle');
+
+    // Show toggle button only on coarse pointers (touch)
+    if (window.matchMedia('(pointer:coarse)').matches) {
+      btn.style.display = 'inline-block';
+      btn.addEventListener('click', e => {
+        const open = card.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    }
+
+    // open state mirrors hover/focus behavior
+    const ro = new MutationObserver(() => {
+      panel.style.opacity = card.classList.contains('is-open') ? '1' : '';
+      panel.style.transform = card.classList.contains('is-open') ? 'translateY(0)' : '';
+    });
+    ro.observe(card, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  })();
 })();

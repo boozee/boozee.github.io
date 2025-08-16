@@ -6,10 +6,13 @@ html {
 a {
   color: var(--brand);
   text-decoration: none;
+  transition: color .2s ease, transform .2s ease; /* Add transition for hover effects */
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--brand-strong); /* Change color on hover */
+  transform: translateY(-1px); /* Subtle lift on hover */
+  text-decoration: none; /* Remove underline on hover if not desired, or keep if preferred */
 }
 
 h1,
@@ -71,7 +74,7 @@ hr {
 .lead {
   font-size: clamp(1.05rem, calc(0.35vw + 0.95rem), 1.2rem);
   line-height: 1.8;
-  color: #d8dbe2;
+  color: var(--fg);
   margin: .5rem 0 0.75rem;
 }
 

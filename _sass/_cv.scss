@@ -1,0 +1,12 @@
+/* CV specific styles */
+.tab-content .card {
+  max-width: 100%; /* Override default card max-width to allow full width */
+  margin-bottom: 16px; /* Add vertical spacing between cards */
+  margin-left: auto; /* Center cards horizontally */
+  margin-right: auto; /* Center cards horizontally */
+}
+
+/* Remove margin-bottom for the last card in the list */
+.tab-content .card:last-child {
+  margin-bottom: 0;
+}

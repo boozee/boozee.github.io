@@ -8,7 +8,7 @@ permalink: /hobbies/
 <div class="grid grid-2">
   {% for h in site.data.hobbies.hobbies %}
     <div class="card">
-      <svg width="26" height="26" class="icon">
+      <svg width="26" height="26" class="icon hobby-icon">
         <use xlink:href="#{{ h.icon }}"></use>
       </svg>
       <h3>{{ h.title }}</h3>

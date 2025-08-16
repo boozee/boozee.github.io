@@ -1,17 +1,35 @@
 <section class="hero">
-  <div class="grid grid-2">
-    <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;">
+  <div class="hero-content">
+    <div class="hero-text-column">
+      <p class="eyebrow">WELCOME</p>
+      <h1 class="hero-title">
+        <span class="line">I’m {{ site.data.cv.name }}{% if site.data.cv.surname %} {{ site.data.cv.surname }}{% endif %}</span>
+        <span class="line accent">a developer who loves turning problems into solutions.</span>
+      </h1>
+
+      <p class="muted">Human Being</p>
+      <p class="hero-subtext">{{ site.data.cv.summary_human }}</p>
+      <div class="rule"></div>
+
       <div>
-        <h1>Hello there, I'm {{ site.data.cv.name }}</h1>
-        <p class="muted">Human Being</p>
-        <p class="lead" style="white-space: pre-line;">{{ site.data.cv.summary_human }}</p>
-        <div class="rule"></div>
         <p class="muted">{{ site.data.cv.role1 }}</p>
         <p class="muted">{{ site.data.cv.role2 }}</p>
-        <p class="lead" style="white-space: pre-line;">{{ site.data.cv.summary_career }}</p>
       </div>
+
+      <p class="hero-subtext">{{ site.data.cv.summary_career }}</p>
     </div>
 
-    {% include contact-card.html %}
+    <div class="hero-card-wrapper">
+      <div class="photo-card card" tabindex="0">
+        <img src="{{ '/assets/img/profile.png' | relative_url }}" alt="Photo of {{ site.data.cv.name }}{% if site.data.cv.surname %} {{ site.data.cv.surname }}{% endif %}" class="profile-photo">
+        <div class="photo-overlay" aria-hidden="true">
+          <ul class="overlay-list">
+            <li><strong>Age:</strong> {{ site.data.cv.age }}</li>
+            <li><strong>Location:</strong> {{ site.data.cv.location }}</li>
+            <li><strong>Pronouns:</strong> {{ site.data.cv.pronouns }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

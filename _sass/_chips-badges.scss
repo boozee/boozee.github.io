@@ -4,15 +4,22 @@
 /* shared base props */
 .badge, .tech-badge {
   display: inline-block;
-  padding: .32rem .8rem;
+  padding: .4rem 1rem; /* Increased padding for softer pill styling */
   border-radius: 999px;
-  font-size: .85rem;
+  font-size: .9rem; /* Slightly increased font size */
   line-height: 1.2;
   font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1); /* Subtle shadow for depth */
+  transition: transform .15s ease, box-shadow .15s ease; /* Add transition for interactivity */
+}
+
+.badge:hover, .tech-badge:hover {
+  transform: translateY(-1px); /* Subtle lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2); /* Enhanced shadow on hover */
 }
 
 /* default badge (neutral blue) */
-.badge { background: #2563eb; color: #fff; }
+.badge { background: var(--brand); color: var(--fg); }
 html[data-theme="light"] .badge { background: var(--brand-light); color: var(--brand-ink); }
 
 /* outline variant */
@@ -21,12 +28,12 @@ html[data-theme="light"] .badge { background: var(--brand-light); color: var(--b
 /* tech badge (unified tone) */
 .tech-badge {
   background: var(--brand-strong);
-  color: #fff;
+  color: var(--fg);
   border: 0;
   font-weight: 600;
 }
 html[data-theme="light"] .tech-badge {
   background: var(--brand-light);
   color: var(--brand-ink);
-  border: 1px solid #93c5fd;
+  border: 1px solid var(--border);
 }

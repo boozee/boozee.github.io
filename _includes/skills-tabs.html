@@ -1,0 +1,69 @@
+{% assign data = site.data.skills %}
+
+<section class="skills3" aria-labelledby="skills-title"> 
+
+  <div class="tabs" role="tablist" aria-label="Skill sections">
+    {% for section in data.sections %}
+      {% assign slug = section.id | default: section.title | slugify %}
+      <button
+        class="tab-button{% if forloop.first %} active{% endif %}"
+        role="tab"
+        id="tab-{{ slug }}"
+        aria-controls="{{ slug }}"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+        tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+        data-tab="{{ slug }}"
+      >
+        {{ section.title }}
+      </button>
+    {% endfor %}
+  </div>
+
+  {% for section in data.sections %}
+    {% assign slug = section.id | default: section.title | slugify %}
+    <div
+      class="tab-content{% if forloop.first %} is-active{% endif %}"
+      role="tabpanel"
+      id="{{ slug }}"
+      aria-labelledby="tab-{{ slug }}"
+      aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+      tabindex="0"
+    >
+      <div class="card">
+        {% if section.blurb %}<h3>{{ section.blurb }}</h3>{% endif %}
+
+        {% if section.groups %}
+          <div class="skills3__groups">
+            {% for group in section.groups %}
+            {% if forloop.first %}
+            <div class="skills3__legend skills3__legend--inline" aria-label="Legend">
+              <span class="lvl-dot expert"></span><span>Expert</span>
+              <span class="lvl-dot strong"></span><span>Strong</span>
+              <span class="lvl-dot working"></span><span>Working</span>
+            </div>
+            {% endif %}
+              {%- assign gicon = group.icon -%}
+              <div class="skills3__group">
+                <div class="skills3__subhead">
+                <span class="skills3__subicon" aria-hidden="true">{{ gicon }}</span>
+                <span class="skills3__subname">{{ group.id }}</span>
+                </div>
+                <ul class="tags {% if section.size == 'big' %}big{% endif %}">
+                  {% for item in group.items %}
+                    <span class="badge tech-badge tag {{ item.level | downcase }}">{{ item.name }}</span>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+          </div>
+        {% elsif section.items %}
+          <ul class="tags {% if section.size == 'big' %}big{% endif %}">
+            {% for item in section.items %}
+              <li class="tag {{ item.level | downcase }}">{{ item.name }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        </div>
+    </div>
+  {% endfor %}
+</section>

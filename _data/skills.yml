@@ -1,32 +1,106 @@
-- category: Main Languages
-  items: [C++, C#, Javascript, Java, SQL]
+legend:
+  expert: Expert
+  strong: Strong
+  working: Working
 
-- category: Web
-  items: [React, Vite, Electron, Three.js, WebGL]
+sections:
+  - id: core
+    title: Core
+    blurb: Daily drivers and specialties.
+    size: big
+    groups:
+      - id: Languages
+        icon: "💬"
+        items:
+          - { name: "C++",            level: expert }
+          - { name: "C#",             level: strong }
+          - { name: "JavaScript",     level: strong }
+          - { name: "Java",           level: strong }
+          - { name: "SQL",            level: strong }
+          - { name: "Python",         level: working }
+      - id: 3D frameworks
+        icon: "⿻"
+        items:
+          - { name: "Unreal Engine",  level: expert }
+          - { name: "Unity Engine",   level: strong }
+          - { name: "Three.js",       level: strong }
+          - { name: "WebGL",          level: strong }
 
-- category: Web Services
-  items: [Azure]
+  - id: supporting
+    title: Supporting
+    blurb: Ecosystem tools and workflows.
+    groups:
+      - id: Main tools
+        icon: "🔨"
+        items:
+          - { name: "JetBrains Rider",      level: expert }
+          - { name: "Git",                  level: expert }
+          - { name: "Visual Studio",        level: strong }
+          - { name: "VS Code",              level: strong }
+          - { name: "Latex",                level: strong }
+          - { name: "Docker",               level: working }
+          - { name: "Azure",                level: working }
+      - id: Workflow tools
+        icon: "📝"
+        items:
+          - { name: "Azure DevOps",    level: expert }
+          - { name: "GitLab",          level: expert }
+          - { name: "Github",          level: strong }
+          - { name: "Jira",            level: working }
+          - { name: "Bitbucket",       level: working }
+          - { name: "Confluence",      level: working }
+      - id: Web stack
+        icon: "🌐"
+        items:
+          - { name: "React",          level: working }
+          - { name: "Electron",       level: working }
+          - { name: "Vite",           level: working }
+      - id: Techniques
+        icon: "🧩"
+        items:
+          - { name: "Automated Testing",          level: strong }
+          - { name: "UML Design",                 level: working }
 
-- category: DevOps
-  items: [Docker, GitHub Actions, GitLab Actions, Azure Devops]
-
-- category: Production Tools
-  items: [GitLab, Azure DevOps, Jira, Bitbucket, Confluence, EasyBuilder Pro]
-
-- category: Dev Tools
-  items: [Visual Studio, JetBrains Rider, Visual Studio Code, Git, Fork]
-
-- category: Game Engines
-  items: [Unreal Engine, Unity]
-
-- category: Platforms
-  items: [Windows, Android, Oculus Quest, HoloLens, HTC Vive, Realwear HMT-1]
-
-- category: Testing
-  items: [Google Mock, Zenject, Extenject]
-
-- category: IA
-  items: [GPT, Claude]
-
-- category: Other
-  items: [Git, LaTeX]
+  - id: platforms
+    title: Platforms
+    blurb: Targets I’ve shipped or prototyped on.
+    groups:
+      - id: Desktop
+        icon: "💻"
+        items:
+          - { name: "Windows",        level: expert }
+          - { name: "Linux",          level: working }
+      - id: Mobile
+        icon: "📱"
+        items:
+          - { name: "Android",        level: strong }
+          - { name: "iOS",            level: working }
+          - { name: "WearOS",         level: working }
+      - id: XR
+        icon: "🕶️"
+        items:
+          - { name: "RealWear HMT-1", level: expert }
+          - { name: "Oculus Quest",   level: strong }
+          - { name: "HoloLens",       level: strong }
+          - { name: "HTC Vive",       level: strong }
+      - id: Embedded
+        icon: "🔌"
+        items:
+          - { name: "EasyBuilder Pro",level: working }
+  - id: managing
+    title: Managing
+    blurb: Leadership and management skills.
+    groups:
+      - id: Management
+        icon: "🏃"
+        items:
+          - { name: "Agile",          level: expert }
+          - { name: "Scrum",          level: expert }
+          - { name: "Kanban",         level: strong }
+      - id: Leadership
+        icon: "🧙🏽‍♂️"
+        items:
+          - { name: "Mentoring",      level: expert }
+          - { name: "Code reviews",   level: strong }
+          - { name: "Conflict resolution", level: strong }
+          - { name: "Technical Interviews", level: strong }

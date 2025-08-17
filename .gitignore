@@ -15,6 +15,10 @@ package-lock.json
 # Ignore VS files
 .vs
 
+# Other
+vendor/
+.DS_Store
+
 # ────────────────
 # Jekyll
 # ────────────────
@@ -22,10 +26,6 @@ package-lock.json
 # Jekyll
 .jekyll-cache/
 .jekyll-metadata
-
-# Other
-vendor/
-.DS_Store
 
 
 # ────────────────

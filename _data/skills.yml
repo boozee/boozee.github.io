@@ -37,7 +37,7 @@ sections:
           - { name: "Git",                  level: expert }
           - { name: "Visual Studio",        level: strong }
           - { name: "VS Code",              level: strong }
-          - { name: "Latex",                level: strong }
+          - { name: "LaTeX",                level: strong }
           - { name: "Docker",               level: working }
           - { name: "Azure",                level: working }
       - id: Workflow tools
@@ -45,7 +45,7 @@ sections:
         items:
           - { name: "Azure DevOps",    level: expert }
           - { name: "GitLab",          level: expert }
-          - { name: "Github",          level: strong }
+          - { name: "GitHub",          level: strong }
           - { name: "Jira",            level: working }
           - { name: "Bitbucket",       level: working }
           - { name: "Confluence",      level: working }
@@ -92,7 +92,7 @@ sections:
         items:
           - { name: "Android",        level: strong }
           - { name: "iOS",            level: working }
-          - { name: "WearOS",         level: working }
+          - { name: "Wear OS",         level: working }
       - id: XR
         icon: "🕶️"
         items:

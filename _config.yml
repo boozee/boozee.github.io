@@ -1,4 +1,4 @@
-title: "Andrea Burti — Software Engineer"
+title: "Andrea Burti"
 author: Andrea Burti
 description: "Personal site powered by coffee and Jekyll."
 url: "https://boozee.github.io"
@@ -26,19 +26,6 @@ defaults:
   - scope: {path: ""}
     values:
       layout: "default"
-
-# Navigation (can be overridden in _data/navigation.yml)
-nav:
-  - title: Home
-    url: "/"
-  - title: CV
-    url: "/cv/"
-  - title: Skills
-    url: "/skills/"
-  - title: Projects
-    url: "/projects/"
-  - title: Hobbies
-    url: "/hobbies/"
 
 # Allow Sass to be used
 sass:

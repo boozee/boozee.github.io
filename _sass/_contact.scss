@@ -41,3 +41,38 @@
   margin: 1em auto; /* Center and add vertical margin */
   line-height: 1.6;
 }
+
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+:root[data-theme="light"] .contact-form input,
+:root[data-theme="light"] .contact-form textarea {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background: var(--brand-strong);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--brand);
+}

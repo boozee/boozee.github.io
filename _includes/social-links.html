@@ -1,11 +1,4 @@
 <div class="contact-grid">
-  <div class="social-item">
-    <a href="mailto:{{ site.data.cv.email }}" aria-label="Email" title="{{ site.data.cv.email }}">
-      <svg width="32" height="32"><use href="#icon-email"></use></svg>
-    </a>
-    <span class="social-label">Email</span>
-  </div>
-
   {% for link in site.data.cv.links %}
     {% assign label = link.label %}
     <div class="social-item">

@@ -60,6 +60,23 @@ sections:
         items:
           - { name: "Automated Testing",          level: strong }
           - { name: "UML Design",                 level: working }
+  - id: managing
+    title: Managing
+    blurb: Leadership and management skills.
+    groups:
+      - id: Management
+        icon: "🏃"
+        items:
+          - { name: "Agile",          level: expert }
+          - { name: "Scrum",          level: expert }
+          - { name: "Kanban",         level: strong }
+      - id: Leadership
+        icon: "🧙🏽‍♂️"
+        items:
+          - { name: "Mentoring",      level: expert }
+          - { name: "Code reviews",   level: strong }
+          - { name: "Conflict resolution", level: strong }
+          - { name: "Technical Interviews", level: strong }
 
   - id: platforms
     title: Platforms
@@ -87,20 +104,16 @@ sections:
         icon: "🔌"
         items:
           - { name: "EasyBuilder Pro",level: working }
-  - id: managing
-    title: Managing
-    blurb: Leadership and management skills.
+
+  - id: spoken languages
+    title: Spoken languages
+    blurb: How a human could converse with me.
     groups:
-      - id: Management
-        icon: "🏃"
+      - id: Mother tongue
+        icon: "🏡"
         items:
-          - { name: "Agile",          level: expert }
-          - { name: "Scrum",          level: expert }
-          - { name: "Kanban",         level: strong }
-      - id: Leadership
-        icon: "🧙🏽‍♂️"
+          - { name: "Italian",        level: expert }
+      - id: Other
+        icon: "🏴󠁧󠁢󠁷󠁬󠁳󠁿"
         items:
-          - { name: "Mentoring",      level: expert }
-          - { name: "Code reviews",   level: strong }
-          - { name: "Conflict resolution", level: strong }
-          - { name: "Technical Interviews", level: strong }
+          - { name: "English",        level: strong }

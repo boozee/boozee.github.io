@@ -22,11 +22,15 @@ html[data-theme="light"] .skills3 {
 .skills3__legend {
   margin: 0 0 1rem;
   color: var(--muted);
-  font-size: .95rem;
+  font-size: .98rem;
   display: flex;
   gap: 14px;
   align-items: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  top: 24px;
+  right: 24px;
+  margin: 0.6em 0.3em;
+  margin-left: auto;
 }
 
 .lvl-dot {
@@ -34,7 +38,7 @@ html[data-theme="light"] .skills3 {
   width: .75rem;
   height: .75rem;
   border-radius: 999px;
-  margin-right: .4rem
+  margin-right: .2rem;
 }
 
 .lvl-dot.expert {
@@ -86,8 +90,8 @@ html[data-theme="light"] .skills3 {
 
 .skills3__subicon {
   display: inline-flex;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   border-radius: 6px;

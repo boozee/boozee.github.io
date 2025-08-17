@@ -11,28 +11,7 @@
     <div class="social-item">
       <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
          aria-label="{{ link.label }}" title="{{ link.label }}">
-        {% if label contains 'GitHub' %}
-          <svg width="32" height="32"><use href="#icon-github"></use></svg>
-        {% elsif label contains 'LinkedIn' %}
-          <svg width="32" height="32"><use href="#icon-linkedin"></use></svg>
-        {% else %}
-          <svg width="32" height="32"><use href="#icon-link"></use></svg>
-        {% endif %}
-      </a>
-      <span class="social-label">{{ label }}</span>
-    </div>
-  {% endfor %}
-
-  {% for link in site.data.hobbies.links %}
-    {% assign label = link.label %}
-    <div class="social-item">
-      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer"
-         aria-label="{{ link.label }}" title="{{ link.label }}">
-        {% if label contains 'Spotify' %}
-          <svg width="32" height="32"><use href="#icon-spotify"></use></svg>
-        {% else %}
-          <svg width="32" height="32"><use href="#icon-link"></use></svg>
-        {% endif %}
+         <svg width="32" height="32"><use href="#{{link.icon}}"/></svg>
       </a>
       <span class="social-label">{{ label }}</span>
     </div>

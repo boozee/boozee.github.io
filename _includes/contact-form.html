@@ -19,7 +19,7 @@
   <!-- accessibility + status -->
   <p id="cf-status" class="cf-status" aria-live="polite"></p>
 
-  <button id="cf-submit" type="submit">Send</button>
+  <button id="cf-submit" type="submit" disabled>Send</button>
 </form>
 
 <!-- success block (hidden until we get 200 OK) -->
@@ -31,6 +31,29 @@
 </div>
 
 <script>
+// Enable/disable submit button based on input validity
+const emailEl = document.getElementById("cf-email");
+const msgEl   = document.getElementById("cf-message");
+const submitBtn = document.getElementById("cf-submit");
+
+function updateButton() {
+  const emailOk = emailEl.value.trim() !== "" && emailEl.checkValidity(); // valid email
+  const msgOk   = msgEl.value.trim().length > 0 && msgEl.checkValidity(); // not empty (and >= minlength)
+  submitBtn.disabled = !(emailOk && msgOk);
+  submitBtn.setAttribute("aria-disabled", String(submitBtn.disabled));
+}
+
+// react to typing, pasting, autofill, etc.
+["input","change","keyup"].forEach(ev => {
+  emailEl.addEventListener(ev, updateButton);
+  msgEl.addEventListener(ev, updateButton);
+});
+
+// initialize (handles browser autofill too)
+updateButton();
+setTimeout(updateButton, 0);
+
+// Handle form submission
 (function () {
   const form = document.getElementById("contact-form");
   const submitBtn = document.getElementById("cf-submit");
@@ -79,15 +102,3 @@
   form.addEventListener("submit", handleSubmit);
 })();
 </script>
-
-<style>
-/* Optional minimal styles; remove if you already style forms globally */
-.contact-form { max-width: 560px; margin: 1.5rem auto; display: grid; gap: 1rem; }
-.cf-field label { display:block; font-weight:600; margin-bottom: .25rem; }
-.cf-field input, .cf-field textarea {
-  width:100%; padding:.75rem; border:1px solid #d0d7de; border-radius:10px;
-}
-#cf-submit { padding:.75rem 1rem; border:0; border-radius:10px; cursor:pointer; }
-#cf-submit:disabled { opacity:.6; cursor:default; }
-.cf-status { min-height:1.25rem; margin:.25rem 0; color:#555; }
-</style>

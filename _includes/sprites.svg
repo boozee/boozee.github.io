@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+{% for i in site.data.icons %}
+  {% capture raw %}{% include {{ i.file }} %}{% endcapture %}
+  {% assign vb = raw | split:'viewBox="' | last | split:'"' | first %}
+  <symbol id="{{ i.id }}" viewBox="{{ vb }}">
+    {{ raw | replace_first:'<svg','<g' | replace:'</svg>','</g>' }}
+  </symbol>
+{% endfor %}
+</svg>

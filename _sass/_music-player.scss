@@ -11,7 +11,8 @@
   opacity: 1;
   transform: translateY(0);
   transition: all 0.3s ease;
-  width: 360px; /* Fixed width to prevent size changes */
+  max-width: 100%;
+  width: auto; /* Allow it to adapt to container width */
   
   &.visible {
     opacity: 1;
@@ -46,12 +47,14 @@
 }
 
 .music-player-info {
-  width: 160px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0; /* Allow shrinking */
   height: 42px; /* Keep fixed height */
   margin-right: 12px;
   display: flex; /* Make it a flex container */
   align-items: center; /* Vertically center its content */
-  justify-content: left; /* Horizontally center its content (music-player-track) */
+  justify-content: flex-start; /* Horizontally align content to the left */
 }
 
 .music-player-track {
@@ -62,26 +65,17 @@
   &.no-artist {
     /* music-player-info handles main centering, so music-player-track just needs to manage its children */
     gap: 0; /* Remove gap when no artist is present */
-
-    #current-track-title {
-      margin: 0; /* Ensure no extra margins */
-      padding: 0; /* Ensure no extra padding */
-      transform: translateY(1px); /* Fine-tune vertical alignment: move down by 1px */
-    }
-
-    #current-track-artist {
-      display: none; /* Hide artist when no artist is present */
-    }
   }
 
-  #current-track-title {
-    font-weight: 600;
-    color: var(--fg);
-    font-size: 13px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+#current-track-title {
+  font-weight: 600;
+  color: var(--fg);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px; /* Limit width to force ellipsis */
+}
   
   #current-track-artist {
     color: var(--muted);
@@ -285,7 +279,7 @@
 @media (max-width: 768px) {
   .music-player {
     max-width: 100%; /* Allow it to take full width of bottom bar container */
-    min-width: unset; /* Remove min-width constraint */
+    min-width: 300px;
   }
   
   .music-player-bar {
@@ -294,12 +288,13 @@
   }
   
 .music-player-info {
-  width: 200px;
+  flex-shrink: 1;
+  min-width: 0; /* Allow shrinking */
   height: 42px; /* Keep fixed height */
   margin-right: 12px;
   display: flex; /* Make it a flex container */
   align-items: center; /* Vertically center its content */
-  justify-content: center; /* Horizontally center its content (music-player-track) */
+  justify-content: flex-start; /* Horizontally align content to the left */
 }
 
 .music-player-track {

@@ -1,4 +1,3 @@
-/* container */
 .card {
   position: relative;
   border-radius: 16px;
@@ -6,8 +5,7 @@
   outline: none;
   box-shadow: 0 12px 32px rgba(0, 0, 0, .45), inset 0 0 0 1px var(--border);
   background: var(--card);
-  /* fallback behind the image */
-  padding: 24px; /* Added padding for internal elements */
+  padding: 24px;
   max-width: 520px;
   transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
 }
@@ -23,24 +21,21 @@
   z-index: 1;
 }
 
-/* image */
 .card__img {
   display: block;
   width: 100%;
   height: auto;
   filter: saturate(.98);
   transition: transform .5s ease, filter .5s ease;
-  border-radius: 14px; /* Micro-polish: slightly round the photo */
+  border-radius: 14px;
 }
 
-/* subtle lift on hover/focus */
 .card:hover .card__img,
 .card:focus-within .card__img {
   transform: scale(1.02);
   filter: saturate(1.05);
 }
 
-/* dim overlay to improve text contrast */
 .card__overlay {
   pointer-events: none;
   position: absolute;
@@ -50,11 +45,9 @@
   transition: opacity .45s ease;
 }
 
-/* panel that fades up */
 .card__panel {
   position: absolute;
   inset: auto 0 0 0;
-  /* bottom */
   padding: 20px 22px 24px;
   color: var(--fg);
   background: var(--card);
@@ -66,7 +59,6 @@
   border-top: 1px solid var(--border);
 }
 
-/* title + spacing */
 .card__panel h3 {
   margin: 0 0 10px;
   font-size: 1.35rem;
@@ -90,7 +82,6 @@
   font-weight: 600;
 }
 
-/* contact icons */
 .card__icons a {
   display: inline-flex;
   align-items: center;
@@ -111,7 +102,6 @@
   background: var(--border-strong);
 }
 
-/* reveal triggers */
 .card:hover .card__panel,
 .card:focus-within .card__panel {
   opacity: 1;
@@ -123,7 +113,6 @@
   opacity: 1;
 }
 
-/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
   .card__img,
@@ -133,7 +122,6 @@
   }
 }
 
-/* optional: a tiny button for touch users if you want explicit toggle */
 .card__toggle {
   position: absolute;
   top: 10px;
@@ -148,5 +136,4 @@
   backdrop-filter: blur(6px);
   cursor: pointer;
   display: none;
-  /* hide by default; show on touch if you want */
 }

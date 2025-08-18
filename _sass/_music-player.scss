@@ -1,7 +1,5 @@
-/* Music Player Styles */
 .music-player {
-  /* No longer fixed, will be part of bottom-bar's flex layout */
-  position: relative; /* Added for absolute positioning of playlist */
+  position: relative;
   background: var(--bg, #ffffff);
   border: 1px solid var(--border, #e2e8f0);
   border-radius: 12px;
@@ -12,20 +10,19 @@
   transform: translateY(0);
   transition: all 0.3s ease;
   max-width: 100%;
-  width: auto; /* Allow it to adapt to container width */
-  
+  width: auto;
+
   &.visible {
     opacity: 1;
     transform: translateY(0);
   }
 
   &.expanded {
-    border-radius: 12px 12px 0 0; /* Remove bottom border-radius when expanded */
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Remove shadow from the main player when expanded */
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
 
-/* Dark theme support */
 :root[data-theme="dark"] .music-player {
   background: var(--bg, #0f141b);
   border-color: var(--border, #1f2937);
@@ -39,8 +36,7 @@
   min-height: 56px;
   background: var(--bg);
   border-radius: 12px;
-  
-  /* Adjust border-radius when playlist is expanded */
+
   .music-player.expanded & {
     border-radius: 0 0 12px 12px;
   }
@@ -49,34 +45,33 @@
 .music-player-info {
   flex-grow: 1;
   flex-shrink: 1;
-  min-width: 0; /* Allow shrinking */
-  height: 42px; /* Keep fixed height */
+  min-width: 0;
+  height: 42px;
   margin-right: 12px;
-  display: flex; /* Make it a flex container */
-  align-items: center; /* Vertically center its content */
-  justify-content: flex-start; /* Horizontally align content to the left */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .music-player-track {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  
+
   &.no-artist {
-    /* music-player-info handles main centering, so music-player-track just needs to manage its children */
-    gap: 0; /* Remove gap when no artist is present */
+    gap: 0;
   }
 
-#current-track-title {
-  font-weight: 600;
-  color: var(--fg);
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 120px; /* Limit width to force ellipsis */
-}
-  
+  #current-track-title {
+    font-weight: 600;
+    color: var(--fg);
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+
   #current-track-artist {
     color: var(--muted);
     font-size: 11px;
@@ -91,7 +86,7 @@
   align-items: center;
   gap: 6px;
   margin-right: 8px;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
 .music-btn {
@@ -105,21 +100,21 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  
+
   &:hover {
     background: var(--border);
     color: var(--brand);
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--brand);
     outline-offset: 2px;
   }
-  
+
   &.music-btn-primary {
     background: var(--brand);
     color: white;
-    
+
     &:hover {
       background: color-mix(in oklab, var(--brand) 80%, black);
     }
@@ -129,29 +124,29 @@
 .music-player-actions {
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 
   .music-btn svg {
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
+    transition: transform 0.3s ease;
   }
 }
 
 .music-player-playlist {
-  position: absolute; /* Position above the bar */
-  bottom: 100%; /* Place it above the music-player-bar */
+  position: absolute;
+  bottom: 100%;
   left: 0;
   width: 100%;
   background: var(--bg);
-  border-bottom: 1px solid var(--border); /* Changed from border-top */
+  border-bottom: 1px solid var(--border);
   max-height: 400px;
   overflow-y: auto;
-  display: none; /* Revert to hidden by default */
-  z-index: 9999; /* Ensure it's above the bottom bar */
-  border-radius: 12px 12px 0 0; /* Rounded top corners */
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1); /* Adjusted shadow for upward expansion */
-  
+  display: none;
+  z-index: 9999;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+
   &.expanded {
-    display: block; /* Show when expanded */
+    display: block;
   }
 }
 
@@ -161,7 +156,7 @@
   justify-content: space-between;
   padding: 16px 24px;
   border-bottom: 1px solid var(--border);
-  
+
   h3 {
     margin: 0;
     font-size: 16px;
@@ -180,14 +175,14 @@
   padding: 12px 24px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  
+
   &:hover {
     background: var(--border);
   }
-  
+
   &.playing {
     background: color-mix(in oklab, var(--brand) 10%, var(--bg));
-    
+
     .music-track-title {
       color: var(--brand);
     }
@@ -197,7 +192,7 @@
 .music-track-info {
   flex: 1;
   min-width: 0;
-  
+
   .music-track-title {
     font-weight: 500;
     color: var(--fg);
@@ -207,7 +202,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .music-track-artist {
     color: var(--muted);
     font-size: 12px;
@@ -216,7 +211,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .music-track-album {
     color: var(--muted);
     font-size: 11px;
@@ -230,23 +225,21 @@
 .music-track-play {
   opacity: 0;
   transition: opacity 0.2s ease;
-  
+
   .music-track:hover & {
     opacity: 1;
   }
-  
+
   .music-track.playing & {
     opacity: 1;
     color: var(--brand);
   }
 }
 
-/* Rotate expand button when playlist is expanded */
 .music-player.expanded .music-player-actions #expand-btn svg {
   transform: rotate(180deg);
 }
 
-/* Music toggle button in header */
 .music-toggle {
   background: transparent;
   border: none;
@@ -258,86 +251,83 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  
+
   &:hover {
     background: var(--border);
     color: var(--brand);
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--brand);
     outline-offset: 2px;
   }
-  
+
   &.active {
     color: var(--brand);
     background: color-mix(in oklab, var(--brand) 10%, var(--bg));
   }
 }
 
-/* Responsive adjustments for music player within bottom bar */
 @media (max-width: 768px) {
   .music-player {
-    max-width: 100%; /* Allow it to take full width of bottom bar container */
+    max-width: 100%;
     min-width: 300px;
   }
-  
+
   .music-player-bar {
     padding: 10px 12px;
     min-height: 52px;
   }
-  
-.music-player-info {
-  flex-shrink: 1;
-  min-width: 0; /* Allow shrinking */
-  height: 42px; /* Keep fixed height */
-  margin-right: 12px;
-  display: flex; /* Make it a flex container */
-  align-items: center; /* Vertically center its content */
-  justify-content: flex-start; /* Horizontally align content to the left */
-}
 
-.music-player-track {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  
-  &.no-artist {
-    /* Revert music-player-track to its original flex properties, as music-player-info handles main centering */
-    /* No need for display: flex, flex-direction: column, align-items, justify-content here */
-    gap: 0; /* Remove gap when no artist is present */
+  .music-player-info {
+    flex-shrink: 1;
+    min-width: 0;
+    height: 42px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .music-player-track {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &.no-artist {
+      gap: 0;
+
+      #current-track-artist {
+        display: none;
+      }
+    }
 
     #current-track-title {
-      margin: 0; /* Ensure no extra margins */
-      padding: 0; /* Ensure no extra padding */
-      transform: translateY(-2px); /* Fine-tune vertical alignment */
+      margin: 0;
+      padding: 0;
+      transform: translateY(-2px);
+      max-width: 120px;
     }
-
-    #current-track-artist {
-      display: none; /* Hide artist when no artist is present */
-    }
-  }
   }
 }
 
-/* Smooth scrollbar for playlist */
 .music-playlist-tracks {
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
-  
+
   &::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background: var(--border);
     border-radius: 3px;
   }
-  
+
   &::-webkit-scrollbar-thumb:hover {
     background: var(--muted);
   }

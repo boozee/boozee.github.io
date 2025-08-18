@@ -1,7 +1,7 @@
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 24px 1rem; /* Consistent vertical padding, 1rem horizontal padding */
+  padding: 24px 1rem;
 }
 
 .rule {
@@ -16,7 +16,6 @@
   padding: 0.75rem 1rem;
 }
 
-/* Spacing tune for mobile */
 @media (max-width: 768px) {
   .section {
     padding: .75rem 1rem;
@@ -38,7 +37,6 @@
   outline-offset: 2px;
 }
 
-/* Skip link accessibility */
 .skip {
   position: absolute;
   left: -9999px;

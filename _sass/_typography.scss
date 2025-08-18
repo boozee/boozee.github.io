@@ -6,13 +6,13 @@ html {
 a {
   color: var(--brand);
   text-decoration: none;
-  transition: color .2s ease, transform .2s ease; /* Add transition for hover effects */
+  transition: color .2s ease, transform .2s ease;
 }
 
 a:hover {
-  color: var(--brand-strong); /* Change color on hover */
-  transform: translateY(-1px); /* Subtle lift on hover */
-  text-decoration: none; /* Remove underline on hover if not desired, or keep if preferred */
+  color: var(--brand-strong);
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 h1,
@@ -22,16 +22,17 @@ h3 {
   margin: 0.6em 0 0.3em;
 }
 
-h1{
+h1 {
   font-size: clamp(1.8rem, calc(2.5vw + 1rem), 3rem);
   line-height: 1.05;
   margin: 0.8rem 0 0.6rem;
   letter-spacing: -0.02em;
   position: relative;
 }
-h1::after{
-  content:"";
-  display:block;
+
+h1::after {
+  content: "";
+  display: block;
   width: 64px;
   height: 3px;
   margin-top: .6rem;
@@ -89,7 +90,6 @@ hr {
   padding: 0 .08em;
 }
 
-/* Spacing tune for mobile */
 @media (max-width: 768px) {
   h1::after {
     width: 52px;

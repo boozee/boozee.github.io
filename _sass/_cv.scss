@@ -1,28 +1,25 @@
-/* CV specific styles */
 .tab-content .card {
-  max-width: 100%; /* Override default card max-width to allow full width */
-  margin-bottom: 16px; /* Add vertical spacing between cards */
-  margin-left: auto; /* Center cards horizontally */
-  margin-right: auto; /* Center cards horizontally */
+  max-width: 100%;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Remove margin-bottom for the last card in the list */
 .tab-content .card:last-child {
   margin-bottom: 0;
 }
 
-/* Responsive styles for CV card header */
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 16px; /* Add some default margin below the header */
+  margin-bottom: 16px;
 }
 
 .card-header-date {
-  white-space: nowrap; /* Keep dates on a single line */
-  flex-shrink: 0; /* Prevent date div from shrinking */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .card-header-info h3 {
@@ -33,21 +30,20 @@
   margin: 2px 0 0 0;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
   .card-header {
-    flex-direction: column; /* Stack date and info vertically */
-    align-items: flex-start; /* Align items to the start */
-    gap: 8px; /* Reduce gap when stacked */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .card-header-info {
-    order: 2; /* Role/Company info comes second */
+    order: 2;
   }
 
   .card-header-date {
-    order: 1; /* Dates come first */
-    margin-bottom: 8px; /* Add space between date and info */
-    white-space: normal; /* Allow dates to wrap if necessary */
+    order: 1;
+    margin-bottom: 8px;
+    white-space: normal;
   }
 }

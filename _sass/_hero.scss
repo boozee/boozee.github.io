@@ -11,10 +11,9 @@
   background: radial-gradient(120% 120% at 80% 20%, rgba(122, 162, 255, 0.05) 0%, transparent 50%);
 }
 
-/* Layout: 66/34 split via CSS Grid */
 .hero-content {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* 66 / 34 */
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   gap: 48px;
   max-width: 1200px;
@@ -22,7 +21,6 @@
   padding: 0 16px;
 }
 
-/* Left column */
 .hero-text-column {
   display: flex;
   flex-direction: column;
@@ -35,7 +33,6 @@
   margin-bottom: 0;
 }
 
-/* Eyebrow */
 .eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
@@ -44,7 +41,6 @@
   margin: 0 0 4px 0;
 }
 
-/* Headline */
 .hero-title {
   margin: 0;
   line-height: 1.1;
@@ -66,36 +62,34 @@
   font-weight: 800;
 }
 
-/* Badges row: keep on one line on larger screens */
 .badge-row {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: nowrap;
-  white-space: nowrap; /* keep badges on a single line */
+  white-space: nowrap;
   margin: 8px 0 2px;
 }
+
 .badge-row .badge {
   font-size: 0.85rem;
   padding: .35rem .8rem;
 }
 
-/* Subtext */
 .hero-subtext {
   max-width: 70ch;
   opacity: 0.95;
-  white-space: pre-line; /* Preserve intentional line breaks from YAML */
+  white-space: pre-line;
 }
 
-/* Right column (photo) */
 .hero-card-wrapper {
   width: 100%;
 }
 
 .photo-card.card {
-  padding: 0;            /* Photo card should not add inner padding */
-  overflow: hidden;      /* Clip image corners */
-  border-radius: 12px;   /* Match site card rounding */
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .profile-photo {
@@ -106,8 +100,10 @@
   object-fit: cover;
 }
 
-/* Photo overlay on hover/focus */
-.photo-card { position: relative; }
+.photo-card {
+  position: relative;
+}
+
 .photo-overlay {
   position: absolute;
   inset: 0;
@@ -122,12 +118,17 @@
   transform: translateY(6px);
   transition: opacity .18s ease, transform .18s ease;
 }
-:root[data-theme="light"] .photo-overlay { background: rgba(15, 23, 42, .55); }
+
+:root[data-theme="light"] .photo-overlay {
+  background: rgba(15, 23, 42, .55);
+}
+
 .photo-card:hover .photo-overlay,
 .photo-card:focus-within .photo-overlay {
   opacity: 1;
   transform: translateY(0);
 }
+
 .photo-overlay .overlay-list {
   list-style: none;
   margin: 0;
@@ -135,14 +136,17 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
-.photo-overlay .overlay-list li + li { margin-top: 6px; }
 
-/* Responsiveness */
+.photo-overlay .overlay-list li+li {
+  margin-top: 6px;
+}
+
 @media (max-width: 992px) {
   .hero-content {
-    grid-template-columns: 3fr 2fr; /* Soften the split slightly on medium screens */
+    grid-template-columns: 3fr 2fr;
     gap: 32px;
   }
+
   .profile-photo {
     max-height: 460px;
   }
@@ -150,11 +154,19 @@
 
 @media (max-width: 768px) {
   .hero-content {
-    grid-template-columns: 1fr; /* Stack */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
-  .badge-row { gap: 6px; } /* tighter spacing on small screens */
-  .badge-row .badge { font-size: 0.82rem; padding: .3rem .7rem; }
+
+  .badge-row {
+    gap: 6px;
+  }
+
+  .badge-row .badge {
+    font-size: 0.82rem;
+    padding: .3rem .7rem;
+  }
+
   .profile-photo {
     max-height: 400px;
   }

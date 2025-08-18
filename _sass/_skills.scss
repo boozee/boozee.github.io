@@ -53,14 +53,12 @@ html[data-theme="light"] .skills3 {
   background: var(--dotWorking)
 }
 
-/* group stack stays vertical */
 .skills3__groups {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* subtle separator between groups */
 .skills3__group {
   position: relative;
   padding-top: 12px;
@@ -80,7 +78,6 @@ html[data-theme="light"] .skills3 {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08) 12%, rgba(255, 255, 255, .08) 88%, transparent);
 }
 
-/* subheader row with icon chip */
 .skills3__subhead {
   display: flex;
   align-items: center;

@@ -10,3 +10,44 @@
 .tab-content .card:last-child {
   margin-bottom: 0;
 }
+
+/* Responsive styles for CV card header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px; /* Add some default margin below the header */
+}
+
+.card-header-date {
+  white-space: nowrap; /* Keep dates on a single line */
+  flex-shrink: 0; /* Prevent date div from shrinking */
+}
+
+.card-header-info h3 {
+  margin: 0;
+}
+
+.card-header-info p.muted {
+  margin: 2px 0 0 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column; /* Stack date and info vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 8px; /* Reduce gap when stacked */
+  }
+
+  .card-header-info {
+    order: 2; /* Role/Company info comes second */
+  }
+
+  .card-header-date {
+    order: 1; /* Dates come first */
+    margin-bottom: 8px; /* Add space between date and info */
+    white-space: normal; /* Allow dates to wrap if necessary */
+  }
+}

@@ -2,9 +2,9 @@
   {% for exp in site.data.cv.experience %}
   <div class="card">
     <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
-      <div>
-        <h3 style="margin:0;">{{ exp.role }}</h3>
-        <p class="muted" style="margin:2px 0 0 0;">
+      <div class="card-header-info"> <!-- Role/Company first -->
+        <h3>{{ exp.role }}</h3>
+        <p class="muted">
           {% if exp.company_url %}
           <a href="{{ exp.company_url | strip }}" target="_blank" rel="noopener noreferrer">
             {{ exp.company }}
@@ -15,7 +15,7 @@
           {% endif %}
         </p>
       </div>
-      <div class="muted" style="white-space:nowrap;">
+      <div class="card-header-date muted"> <!-- Dates second -->
         {{ exp.start }} — {{ exp.end }}
       </div>
     </div>

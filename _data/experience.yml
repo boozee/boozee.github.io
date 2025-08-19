@@ -1,0 +1,41 @@
+- company: Caracol AM
+  company_url: https://caracol-am.com/
+  role: Tech Lead
+  period: 2025–now
+  tech_primary: [C#, Javascript, React, Three.js, Jira]
+  tech_support: [C++, Azure, Agile Kanban]
+  tech_more: [Vite, Electron, AWS, CI/CD]
+  bullets:
+    - "Leading the frontend development of a custom LFAM slicer and IoT platform."
+    - "Ensuring continuous improvement of the development process and code quality."
+    - "Focused on mentoring and growing a team of 10 developers, emphasizing best practices and code quality."
+    - "Main developer of Jira workflows, enhancing project management efficiency."
+
+- company: Zuru Tech
+  company_url: https://zuru.tech/
+  role: Team Leader - Unreal Engine & C++ Developer
+  period: 2021-2025
+  tech_primary: [C++, Unreal Engine, GitLab]
+  tech_support: [Google Mock, Python, Agile Scrum]
+  tech_more: [Clipper Lib 2, Parasolid, Figma, CI/CD]
+  bullets:
+    - "Leading a stream-aligned team of 7 developers in the development of a BIM geometry-layer."
+    - "Developed architectures and systems for real-time 3D applications using Unreal Engine."
+    - "Collaborated with cross-functional teams and Scrum figures to translate roadmaps into reality."
+    - "Continuous improvement of the intra and inter-team processes, focusing on efficiency and transparency."
+    - "Team-recognized for being inspirational and pushing for the important topics."
+      
+- company: SPACE1 (OverIT)
+  company_note: "Company was acquired by OverIT in 2021"
+  company_url: https://www.indx.com/it/product/overit-space-1-it
+  role: Unity & .NET Software Developer
+  period: 2018-2021
+  tech_primary: [C#, Unity Engine, Azure DevOps]
+  tech_support: [Java, Android, Azure DevOps, Agile Scrum]
+  tech_more: [Unreal Engine, Zenject, Hololens]
+  bullets:
+    - Client-side developer for UI, business logic, and unit testing.
+    - Developed B2B XR applications ranging from digital twins to remote collaboration and simulation trainings.
+    - Researched and implemented integrations with cutting-edge XR technologies.
+    - Lead developer for a custom Unreal Engine 4 DAM plugin.
+    - Member of a Scrum team, fostering the importance of collaboration and agile methodologies.

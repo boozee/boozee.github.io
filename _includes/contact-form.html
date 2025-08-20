@@ -13,16 +13,13 @@
     <textarea id="cf-message" name="message" rows="5" required></textarea>
   </div>
 
-  <!-- honeypot -->
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-  <!-- accessibility + status -->
-  <p id="cf-status" class="cf-status" aria-live="polite"></p>
-
   <button id="cf-submit" type="submit" disabled>Send</button>
+
+  <p id="cf-status" class="cf-status" aria-live="polite"></p>
 </form>
 
-<!-- success block (hidden until we get 200 OK) -->
 <div id="cf-success" class="cf-success" style="display:none; text-align:center; margin-top:2rem;">
   <img src="{{ "/assets/img/puppy-thanks.png" | relative_url }}"
        alt="Cute puppy"
@@ -31,7 +28,6 @@
 </div>
 
 <script>
-// Enable/disable submit button based on input validity
 const emailEl = document.getElementById("cf-email");
 const msgEl   = document.getElementById("cf-message");
 const submitBtn = document.getElementById("cf-submit");

@@ -104,16 +104,3 @@ sections:
         icon: "🔌"
         items:
           - { name: "EasyBuilder Pro",level: working }
-
-  - id: spoken languages
-    title: Spoken languages
-    blurb: How a human could converse with me.
-    groups:
-      - id: Mother tongue
-        icon: "🏡"
-        items:
-          - { name: "Italian",        level: expert }
-      - id: Other
-        icon: "🏴󠁧󠁢󠁷󠁬󠁳󠁿"
-        items:
-          - { name: "English",        level: strong }

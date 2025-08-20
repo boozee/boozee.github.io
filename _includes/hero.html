@@ -27,6 +27,10 @@
             <li><strong>Age:</strong> {{ site.data.cv.age }}</li>
             <li><strong>Location:</strong> {{ site.data.cv.location }}</li>
             <li><strong>Pronouns:</strong> {{ site.data.cv.pronouns }}</li>
+            <br>
+            {% for lang in site.data.cv.languages %}
+            <li><strong>Language:</strong> {{ lang }}</li>
+            {% endfor %}
           </ul>
         </div>
       </div>

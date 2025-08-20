@@ -3,6 +3,11 @@ hobbies:
     blurb: Weekend rides since young age, now equipped with a Cannondale Tesoro NEO X 3 for longer journeys.
           My longest ride? Up to Gemona's hills, about 100km round trip.
     icon: icon-bike
+  - title: Economy
+    blurb: From studying about the shenanigans of macroeconomics to following the latest news, I find economics fascinating.
+          I also enjoy discussing it with friends and family, even if they don't always share my enthusiasm.
+          I'm an active practitioner of personal finance, not to become rich, but for the fun I find in such a practical science.
+    icon: icon-economy
   - title: Technology
     blurb: Maybe obvious, maybe not. I build my own PCs and love to tinker with hardware and software.
           I also used to help managing a tech forum and I still enjoy following the last trends in the industry.

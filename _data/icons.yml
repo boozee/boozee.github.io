@@ -22,3 +22,5 @@
   file: icons/icon-sport.svg
 - id: icon-spotify
   file: icons/icon-spotify.svg
+- id: icon-economy
+  file: icons/icon-economy.svg

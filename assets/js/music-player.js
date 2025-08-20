@@ -177,6 +177,7 @@ class MusicPlayer {
   
   onYouTubeAPIReady() {
     this.player = new YT.Player('youtube-player', {
+      host: 'https://www.youtube-nocookie.com',
       height: '0',
       width: '0',
       playerVars: {
@@ -199,7 +200,6 @@ class MusicPlayer {
   
   onPlayerReady() {
     this.isPlayerReady = true;
-    console.log('Music player ready');
   }
   
   onPlayerStateChange(event) {

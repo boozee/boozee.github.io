@@ -1,0 +1,55 @@
+{%- assign certs = include.items | default: site.data.certifications -%}
+
+<div class="cv-card-list">
+  {% for c in certs %}
+  <div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+      <div class="card-header-info" style="display:flex;gap:10px;align-items:flex-start;">
+        {% if c.Icon %}
+          <img src="{{ c.Icon | relative_url }}" alt="{{ c.Name | escape }}" width="50" height="50" style="flex:0 0 auto;object-fit:contain;border-radius:6px;" loading="lazy" decoding="async">
+        {% endif %}
+        <div>
+          <h3>{{ c.Name }}</h3>
+          <p class="muted">
+            {{ c["Issued By"] }}
+          </p>
+        </div>
+      </div>
+
+      <div class="card-header-date muted">
+        {% if c["Date Issued"] %}
+          <time datetime="{{ c["Date Issued"] | append: '-01' }}">
+            {{ c["Date Issued"] | append: '-01' | date: "%b %Y" }}
+          </time>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if c.Description %}
+      <p>{{ c.Description }}</p>
+    {% endif %}
+
+    {% if c["Credential ID"] or c["Credential URL"] %}
+    <ul class="list">
+      {% if c["Credential ID"] %}
+      <li><strong>ID:</strong> {{ c["Credential ID"] }}</li>
+      {% endif %}
+
+      {% if c["Credential URL"] %}
+        {% assign cred = c["Credential URL"] %}
+        {% if cred contains '://' %}
+          {% assign cred_href = cred %}
+        {% else %}
+          {% assign cred_href = cred | relative_url %}
+        {% endif %}
+      <li>
+        <a href="{{ cred_href }}" target="_blank" rel="noopener noreferrer" aria-label="View credential: {{ c.Name | escape }}">
+          View credential
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

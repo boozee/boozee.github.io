@@ -19,8 +19,7 @@ html[data-theme="light"] .skills3 {
   color: var(--ink)
 }
 
-.skills3__legend {
-  margin: 0 0 1rem;
+.skills3-legend {
   color: var(--muted);
   font-size: .98rem;
   display: flex;
@@ -53,39 +52,39 @@ html[data-theme="light"] .skills3 {
   background: var(--dotWorking)
 }
 
-.skills3__groups {
+.skills3-groups {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.skills3__group {
+.skills3-group {
   position: relative;
   padding-top: 12px;
 }
 
-.skills3__group+.skills3__group {
+.skills3-group+.skills3-group {
   margin-top: 4px;
 }
 
-.skills3__group+.skills3__group::before {
+.skills3-group+.skills3-group::before {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08) 12%, rgba(255, 255, 255, .08) 88%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08) 12%, rgba(255, 255, 255, 0.08) 88%, transparent);
 }
 
-.skills3__subhead {
+.skills3-subhead {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 0 0 8px;
 }
 
-.skills3__subicon {
+.skills3-subicon {
   display: inline-flex;
   width: 40px;
   height: 40px;
@@ -96,7 +95,7 @@ html[data-theme="light"] .skills3 {
   font-size: 24px;
 }
 
-.skills3__subname {
+.skills3-subname {
   font-size: .95rem;
   font-weight: 650;
   letter-spacing: .2px;
@@ -119,7 +118,7 @@ html[data-theme="light"] .skills3 {
   border-radius: 999px;
   background: var(--pill);
   color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   font-size: .98rem;
   line-height: 1;
   transition: transform .15s ease, background .15s ease, border-color .15s ease;
@@ -128,7 +127,7 @@ html[data-theme="light"] .skills3 {
 .tag:hover {
   transform: translateY(-1px);
   background: var(--pillHover);
-  border-color: rgba(255, 255, 255, .12)
+  border-color: rgba(255, 255, 255, 0.12)
 }
 
 .tags.big .tag {
@@ -162,7 +161,7 @@ html[data-theme="light"] .skills3 {
 
 .tag.expert {
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, .06) inset
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset
 }
 
 @media (prefers-reduced-motion: reduce) {

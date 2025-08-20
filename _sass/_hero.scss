@@ -3,12 +3,12 @@
   background: none;
 }
 
-.hero--bg {
-  background: radial-gradient(120% 120% at 80% 20%, rgba(29, 78, 216, 0.05) 0%, transparent 50%);
+.hero-bg {
+  background: radial-gradient(120% 120% at 80% 20%, rgba(29, 78, 216, 0.5) 0%, transparent 50%);
 }
 
-:root[data-theme="dark"] .hero--bg {
-  background: radial-gradient(120% 120% at 80% 20%, rgba(122, 162, 255, 0.05) 0%, transparent 50%);
+:root[data-theme="dark"] .hero-bg {
+  background: radial-gradient(120% 120% at 80% 20%, rgba(122, 162, 255, 0.5) 0%, transparent 50%);
 }
 
 .hero-content {
@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0px;
+  gap: 0;
   min-width: 300px;
 }
 
@@ -38,7 +38,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 4px 0;
+  margin: 0 0 4px;
 }
 
 .hero-title {
@@ -107,7 +107,7 @@
 .photo-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .55);
+  background: rgba(0, 0, 0, 0.55);
   color: #fff;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@
 }
 
 :root[data-theme="light"] .photo-overlay {
-  background: rgba(15, 23, 42, .55);
+  background: rgba(15, 23, 42, 0.55);
 }
 
 .photo-card:hover .photo-overlay,
@@ -141,7 +141,7 @@
   margin-top: 6px;
 }
 
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .hero-content {
     grid-template-columns: 3fr 2fr;
     gap: 32px;
@@ -152,7 +152,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .hero-content {
     grid-template-columns: 1fr;
     gap: 24px;

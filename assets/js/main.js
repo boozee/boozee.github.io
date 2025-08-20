@@ -90,8 +90,8 @@
     const card = document.querySelector('.card');
     if (!card) return; // Exit if card element is not found
 
-    const panel = card.querySelector('.card__panel');
-    const btn = card.querySelector('.card__toggle');
+    const panel = card.querySelector('.card-panel');
+    const btn = card.querySelector('.card-toggle');
 
     // Show toggle button only on coarse pointers (touch)
     if (window.matchMedia('(pointer:coarse)').matches) {

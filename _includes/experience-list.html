@@ -30,14 +30,14 @@
 
     <div class="tech" data-tech>
       {% for t in exp.tech_primary %}
-      <span class="chip chip--primary">{{ t }}</span>
+      <span class="chip chip-primary">{{ t }}</span>
       {% endfor %}
 
       {%- assign support_total = exp.tech_support | size | default: 0 -%}
       {%- assign support_shown = 0 -%}
       {%- assign support_hidden = support_total | minus: support_shown -%}
       {%- if support_hidden < 0 %}{% assign support_hidden=0 %}{% endif %} {% if exp.tech_support %} {% for t in
-        exp.tech_support limit:support_shown %} <span class="chip chip--muted">{{ t }}</span>
+        exp.tech_support limit:support_shown %} <span class="chip chip-muted">{{ t }}</span>
         {% endfor %}
         {% endif %}
 
@@ -47,20 +47,20 @@
         {% if hidden_total > 0 %}
         {% assign more_id = exp.company | append: '-' | append: exp.period | slugify %}
 
-        <button class="chip chip--more" type="button" aria-controls="more-{{ more_id }}" aria-expanded="false">
+        <button class="chip chip-more" type="button" aria-controls="more-{{ more_id }}" aria-expanded="false">
           More ({{ hidden_total }})
         </button>
 
         <span id="more-{{ more_id }}" class="more-chips" hidden>
           {% if support_hidden > 0 %}
           {% for t in exp.tech_support offset:support_shown %}
-          <span class="chip chip--muted">{{ t }}</span>
+          <span class="chip chip-muted">{{ t }}</span>
           {% endfor %}
           {% endif %}
 
           {% if exp.tech_more %}
           {% for t in exp.tech_more %}
-          <span class="chip chip--muted">{{ t }}</span>
+          <span class="chip chip-muted">{{ t }}</span>
           {% endfor %}
           {% endif %}
         </span>
@@ -73,7 +73,7 @@
 </div>
 
 <script>
-  document.querySelectorAll('.cv-card-list .tech .chip--more').forEach(btn => {
+  document.querySelectorAll('.cv-card-list .tech .chip-more').forEach(btn => {
     const more = document.getElementById(btn.getAttribute('aria-controls'));
     if (!more) return;
     btn.addEventListener('click', () => {

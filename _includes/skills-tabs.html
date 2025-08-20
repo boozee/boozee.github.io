@@ -32,7 +32,7 @@
       <div class="card">
         <div style="display: flex; gap:16px;">
         {% if section.blurb %}<h3>{{ section.blurb }}</h3>{% endif %}
-        <div class="skills3__legend skills3__legend--inline" aria-label="Legend">
+        <div class="skills3-legend skills3-legend--inline" aria-label="Legend">
           <span class="lvl-dot expert"></span><span>Expert</span>
           <span class="lvl-dot strong"></span><span>Strong</span>
           <span class="lvl-dot working"></span><span>Working</span>
@@ -40,13 +40,13 @@
         </div>
 
         {% if section.groups %}
-          <div class="skills3__groups">
+          <div class="skills3-groups">
             {% for group in section.groups %}
               {%- assign gicon = group.icon -%}
-              <div class="skills3__group">
-                <div class="skills3__subhead">
-                <span class="skills3__subicon" aria-hidden="true">{{ gicon }}</span>
-                <span class="skills3__subname">{{ group.id }}</span>
+              <div class="skills3-group">
+                <div class="skills3-subhead">
+                <span class="skills3-subicon" aria-hidden="true">{{ gicon }}</span>
+                <span class="skills3-subname">{{ group.id }}</span>
                 </div>
                 <ul class="tags {% if section.size == 'big' %}big{% endif %}">
                   {% for item in group.items %}

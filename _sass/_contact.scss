@@ -42,10 +42,10 @@
 }
 
 .contact-form {
-  max-width: 500px;
-  margin: 2rem auto;
-  display: flex;
   flex-direction: column;
+  max-width: 560px;
+  margin: 1.5rem auto;
+  display: grid;
   gap: 1rem;
 }
 
@@ -55,6 +55,14 @@
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+.cf-field input,
+.cf-field textarea {
+  width: 100%;
+  padding: .75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
 }
 
 :root[data-theme="light"] .contact-form input,
@@ -76,25 +84,10 @@
   background: var(--brand);
 }
 
-.contact-form {
-  max-width: 560px;
-  margin: 1.5rem auto;
-  display: grid;
-  gap: 1rem;
-}
-
 .cf-field label {
   display: block;
   font-weight: 600;
   margin-bottom: .25rem;
-}
-
-.cf-field input,
-.cf-field textarea {
-  width: 100%;
-  padding: .75rem;
-  border: 1px solid #d0d7de;
-  border-radius: 10px;
 }
 
 #cf-submit {

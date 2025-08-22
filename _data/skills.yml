@@ -10,7 +10,7 @@ sections:
     size: big
     groups:
       - id: Languages
-        icon: "💬"
+        icon: icon-cloud
         items:
           - { name: "C++",            level: expert }
           - { name: "C#",             level: strong }
@@ -19,7 +19,7 @@ sections:
           - { name: "SQL",            level: strong }
           - { name: "Python",         level: working }
       - id: 3D frameworks
-        icon: "⿻"
+        icon: icon-cube
         items:
           - { name: "Unreal Engine",  level: expert }
           - { name: "Unity Engine",   level: strong }
@@ -31,7 +31,7 @@ sections:
     blurb: Ecosystem tools and workflows.
     groups:
       - id: Main tools
-        icon: "🔨"
+        icon: icon-hammer
         items:
           - { name: "JetBrains Rider",      level: expert }
           - { name: "Git",                  level: expert }
@@ -41,7 +41,7 @@ sections:
           - { name: "Docker",               level: working }
           - { name: "Azure",                level: working }
       - id: Workflow tools
-        icon: "📝"
+        icon: icon-pen-paper
         items:
           - { name: "Azure DevOps",    level: expert }
           - { name: "GitLab",          level: expert }
@@ -50,13 +50,13 @@ sections:
           - { name: "Bitbucket",       level: working }
           - { name: "Confluence",      level: working }
       - id: Web stack
-        icon: "🌐"
+        icon: icon-globe
         items:
           - { name: "React",          level: working }
           - { name: "Electron",       level: working }
           - { name: "Vite",           level: working }
       - id: Techniques
-        icon: "🧩"
+        icon: icon-puzzle
         items:
           - { name: "Automated Testing",          level: strong }
           - { name: "UML Design",                 level: working }
@@ -65,13 +65,13 @@ sections:
     blurb: Leadership and management skills.
     groups:
       - id: Management
-        icon: "🏃"
+        icon: icon-running
         items:
           - { name: "Agile",          level: expert }
           - { name: "Scrum",          level: expert }
           - { name: "Kanban",         level: strong }
       - id: Leadership
-        icon: "🧙🏽‍♂️"
+        icon: icon-sage
         items:
           - { name: "Mentoring",      level: expert }
           - { name: "Code reviews",   level: strong }
@@ -83,24 +83,24 @@ sections:
     blurb: Targets I’ve shipped or prototyped on.
     groups:
       - id: Desktop
-        icon: "💻"
+        icon: icon-monitor
         items:
           - { name: "Windows",        level: expert }
           - { name: "Linux",          level: working }
       - id: Mobile
-        icon: "📱"
+        icon: icon-smartphone
         items:
           - { name: "Android",        level: strong }
           - { name: "iOS",            level: working }
           - { name: "Wear OS",         level: working }
       - id: XR
-        icon: "🕶️"
+        icon: icon-glasses
         items:
           - { name: "RealWear HMT-1", level: expert }
           - { name: "Oculus Quest",   level: strong }
           - { name: "HoloLens",       level: strong }
           - { name: "HTC Vive",       level: strong }
       - id: Embedded
-        icon: "🔌"
+        icon: icon-socket
         items:
           - { name: "EasyBuilder Pro",level: working }

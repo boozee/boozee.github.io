@@ -24,3 +24,27 @@
   file: icons/icon-spotify.svg
 - id: icon-economy
   file: icons/icon-economy.svg
+- id: icon-cloud
+  file: icons/icon-cloud.svg
+- id: icon-cube
+  file: icons/icon-cube.svg
+- id: icon-glasses
+  file: icons/icon-glasses.svg
+- id: icon-globe
+  file: icons/icon-globe.svg
+- id: icon-hammer
+  file: icons/icon-hammer.svg
+- id: icon-monitor
+  file: icons/icon-monitor.svg
+- id: icon-pen-paper
+  file: icons/icon-pen-paper.svg
+- id: icon-puzzle
+  file: icons/icon-puzzle.svg
+- id: icon-running
+  file: icons/icon-running.svg
+- id: icon-sage
+  file: icons/icon-sage.svg
+- id: icon-smartphone
+  file: icons/icon-smartphone.svg
+- id: icon-socket
+  file: icons/icon-socket.svg

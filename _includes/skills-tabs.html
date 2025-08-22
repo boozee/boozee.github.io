@@ -45,7 +45,9 @@
               {%- assign gicon = group.icon -%}
               <div class="skills3-group">
                 <div class="skills3-subhead">
-                <span class="skills3-subicon" aria-hidden="true">{{ gicon }}</span>
+                  <svg width="26" height="26" class="icon">
+                    <use xlink:href="#{{ gicon }}"></use>
+                  </svg>
                 <span class="skills3-subname">{{ group.id }}</span>
                 </div>
                 <ul class="tags {% if section.size == 'big' %}big{% endif %}">

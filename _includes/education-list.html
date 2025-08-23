@@ -1,5 +1,5 @@
 <div class="cv-card-list">
-  {% for e in site.data.cv.education reversed %}
+  {% for e in site.data.education reversed %}
     <div class="card">
       <h3 style="margin:0;">{{ e.title }}</h3>
       <p class="muted" style="margin:.25rem 0 0 0;">{{ e.school }}{% if e.year %} — {{ e.year }}{% endif %}</p>

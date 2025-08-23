@@ -3,59 +3,15 @@ surname: Burti
 role1: Tech Lead
 role2: Senior Software Engineer
 location: Vimodrone (MI), Italy
-email: andrea.burti.3@gmail.com
 age: 33
 pronouns: He/Him
 languages:
   - Italian (native)
   - English (fluent)
-summary_human: >
-  I’m a curious and rational person who believes growth comes from challenging your own ideas. I enjoy learning, exploring different viewpoints, and balancing technical thinking with empathy.
-summary_career: >
-  Senior Software Engineer with expertise in 3D Graphics, Game Engines, and visualization. I believe technical quality is the foundation of long-term success.
+summary_human:
+  "I’m a curious and rational person who believes growth comes from challenging your own ideas. I enjoy learning, exploring different viewpoints, and balancing technical thinking with empathy."
+summary_career:
+  "Senior Software Engineer with expertise in 3D Graphics, Game Engines, and visualization. I believe technical quality is the foundation of long-term success.
 
 
-  As a Tech Lead, I mentor teams to deliver robust, sustainable software while fostering collaboration and keeping the human side of development in focus.
-
-education:
-  - school: Liceo Scientifico N. Copernico (Udine)
-    title: High School Diploma in Science - PNI
-    description: Where I fell in love with programming, maths and logic. And when I started my long journey of self discovery.
-    thesis: "The communication during the 20th century"
-    grades: 86/100
-    year: 2011
-  - school: University of Udine (Udine)
-    title: BSc. in Computer Science (3 years)
-    description: The bases of my knowledge, but also where I felt there was something deeper than typing buttons. 
-    thesis: "Analysis and development of an analytics web module for a commercial/touristic platform"
-    grades: 104/110
-    year: 2015
-  - school: University of Udine (Udine)
-    title: MSc. in Computer Science (2 years)
-    description: Here I discovered 3D Graphics, Unreal Engine, the Complexity theory and burnouts. But I'm glad I did it.
-    thesis: "Efficient Computation of Object Visibility in 3D Scenes"
-    grades: 110/110 cum laude
-    year: 2017
-links:
-  - label: GitHub
-    url: https://github.com/boozee
-    icon: icon-github
-  - label: LinkedIn
-    url: https://www.linkedin.com/in/andrea-burti-0393a395/
-    icon: icon-linkedin
-  - label: Spotify
-    url: https://open.spotify.com/user/31o2s3ydnaqfokcfbz4i5xq7hzu4
-    icon: icon-spotify
-  - label: Instagram
-    url: https://www.instagram.com/butseee/
-    icon: icon-instagram
-skills_summary:
-  - Unreal Engine (C++)
-  - Unity Engine (C#)
-  - Three.js
-  - Android (Java)
-  - XR Development
-  - C++
-  - C# & .NET
-  - Java
-  - Javascript
+  As a Tech Lead, I mentor teams to deliver robust, sustainable software while fostering collaboration and keeping the human side of development in focus."

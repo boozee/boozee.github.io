@@ -1,3 +1,8 @@
+- name: This website
+  description: Recursion anyone? This is my personal website, built with love and hosted on GitHub Pages.
+  tags: [HTML, SCSS, JavaScript, Jekyll, PJAX, GitHub Pages, Docker]
+  repo: https://github.com/boozee/boozee.github.io
+
 - name: Undisclosed Secret Project
   description: It's a game, I'm not working on it alone, and I can't talk about it. Stay tuned!
   tags: [Unreal Engine, C++]

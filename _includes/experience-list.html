@@ -73,13 +73,26 @@
 </div>
 
 <script>
-  document.querySelectorAll('.cv-card-list .tech .chip-more').forEach(btn => {
-    const more = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!more) return;
-    btn.addEventListener('click', () => {
+function initializeMoreButtons() {
+  const cardList = document.querySelector('.cv-card-list');
+  if (cardList) {
+    cardList.addEventListener('click', (event) => {
+      const btn = event.target.closest('.chip-more');
+      if (!btn) return;
+
+      const more = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!more) return;
+
       more.hidden = false;
       btn.setAttribute('aria-expanded', 'true');
       btn.remove();
     });
-  });
+  }
+}
+
+// Initialize on initial page load
+initializeMoreButtons();
+
+// Re-initialize when PJAX loads new content
+document.addEventListener('pjax:ready', initializeMoreButtons);
 </script>

@@ -10,7 +10,7 @@ hobbies:
     icon: icon-economy
   - title: Technology
     blurb: Maybe obvious, maybe not. I build my own PCs and love to tinker with hardware and software.
-          I also used to help managing a tech forum and I still enjoy following the last trends in the industry.
+          I used to help manage a tech forum, and I still enjoy following the latest trends in the industry.
     icon: icon-pc
   - title: Reading
     blurb: >
@@ -22,9 +22,9 @@ hobbies:
           Now I play less, although I'm particularly fascinated by simulations and city-builders.
     icon: icon-gameboy
   - title: Music
-    blurb: Once a metalhead, then an electronic music lover. Is stopped giving myself labels, I just love music. You can explore some of them in the embedded playlist below.
+    blurb: Once a metalhead, then an electronic music lover. I’ve stopped giving myself labels, I just love music.. You can explore some of them in the embedded playlist below.
     icon: icon-microphone
   - title: Sofa athlete
-    blurb: There's pretty much no sport I don't like, and I especially love to follow the ""minor"" ones during the Olympic weeks.
+    blurb: There's pretty much no sport I don't like, and I especially love to follow the 'minor' ones during the Olympic weeks.
           That said, my favourites are F1, Tennis, and American Football.
     icon: icon-sport

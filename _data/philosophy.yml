@@ -12,8 +12,8 @@ sections:
     title: Tech Principles
     summary: A few rules of thumb I lean while navigating tech.
     bullets:
-      - "<b>Code for humans:</b> machines are fast, we are not. Clean, well-named and documented code leads to fewer bugs and increased velocity."
-      - "<b>Divide-et-impera:</b> complexity is the enemy of clarity; break problems into smaller pieces."
+      - "<b>Code for humans:</b> machines are fast; humans are not. Clean, well-named and documented code leads to fewer bugs and increased velocity."
+      - "<b><i>Divide et impera</i>:</b> complexity is the enemy of clarity; break problems into smaller pieces."
       - "<b>Measure, then take decisions:</b> profile before micro-optimizing, guesses are just the first step."
       - "<b>Design for deletion and deletion for design:</b> code should be easy to remove/refactor, and it should be removed when it no longer serves a purpose."
 

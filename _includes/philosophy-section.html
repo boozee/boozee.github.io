@@ -1,0 +1,16 @@
+<div class="card" id="{{ s.id | default: s.title | slugify }}">
+  <div class="card-header">
+    <div class="card-header-info">
+      <h3 style="margin:0">{{ s.title }}</h3>
+      {% if s.summary %}<p class="muted" style="margin-top:6px">{{ s.summary }}</p>{% endif %}
+    </div>
+  </div>
+
+  {% if s.bullets and s.bullets.size > 0 %}
+  <ul class="list">
+    {% for b in s.bullets %}
+      <li>{{ b }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

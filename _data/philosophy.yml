@@ -1,0 +1,45 @@
+sections:
+  - id: work-ethics
+    title: Work Ethics
+    summary: Principles that live higher than me.
+    bullets:
+      - "<b>Transparency is empathy:</b> being open about decisions, blockers and mistakes builds trust and helps the team help you. Nobody is an <i>Ubermensch</i>."
+      - "<b>Ask & offer support:</b> we are stronger together, and collaboration is the key to success."
+      - "<b>Continuous improvement:</b> reflect on what went well and what could be better, both personally and as a team."
+      - "<b>Honesty:</b> facing reality as it is, not as we wish it to be, is the first step to solving any problem."
+
+  - id: tech-principles
+    title: Tech Principles
+    summary: A few rules of thumb I lean while navigating tech.
+    bullets:
+      - "<b>Code for humans:</b> machines are fast, we are not. Clean, well-named and documented code leads to fewer bugs and increased velocity."
+      - "<b>Divide-et-impera:</b> complexity is the enemy of clarity; break problems into smaller pieces."
+      - "<b>Measure, then take decisions:</b> profile before micro-optimizing, guesses are just the first step."
+      - "<b>Design for deletion and deletion for design:</b> code should be easy to remove/refactor, and it should be removed when it no longer serves a purpose."
+
+  - id: way-of-working
+    title: Way of working
+    summary: How I structure work to keep momentum without surprises.
+    bullets:
+      - "<b>Clear flows, less enthropy:</b> workflows are never perfect, but continuously improving them makes everyone efficient, happy and deterministic."
+      - "<b>Don't rely on common sense:</b> laying the groundwork for predictable outcomes works wonders."
+      - "<b>Tracking is your friend:</b> I like to track ideas, proposals, refactors and everything that can contribute to thr project. <i>Verba volant, scripta manent.</i>"
+      - "<b>Meetings are a double-edged sword:</b> if a meeting is needed, have a clear agenda, reason for partecipants and outcome. Otherwise, async communication is superior."
+
+  - id: collaboration
+    title: Collaboration & Feedback
+    summary: The ways I engage colleagues to get the best out of the day.
+    bullets:
+      - "<b>No question is stupid:</b> we all start somewhere, and asking questions is the fastest way to learn. I love to ask questions, and I love to answer them."
+      - "<b>Positive criticism:</b> critique the code, not the person. Assume good intent and lead them to continuous improvement."
+      - "<b>Seniority is a label:</b> each and every person is unique, and to collaborate effectively means finding the right approach for each individual."
+      - "<b>Feedback-based:</b> feedback is crucial for growth, both personally and as a team. I actively seek it and provide it constructively."
+
+  - id: quality-and-delivery
+    title: Quality & delivery
+    summary: Minmaxing delivery speed and software quality, easier said than done.
+    bullets:
+      - "<b>Tech-debt is <i>our</i> rival:</b> it plays fair rules and cannot be defeated for once. Taming it is the real challenge for long-term success."
+      - "<b>Automation is your best weapon:</b>. Tests, CI/CD, monitoring, alerting are the pillars of a reliable system."
+      - "<b>Learn from the world:</b> leverage existing tools and libraries, don't reinvent the wheel. Be open to new ideas and technologies."
+      - "<b>Perfection is the asymptote of iteration:</b> shipping early and often is the best way to get feedback and improve. Perfection is the enemy of progress."

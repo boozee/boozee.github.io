@@ -1,7 +1,8 @@
 name: Andrea
 surname: Burti
-role1: Tech Lead
+role1: Human Being
 role2: Senior Software Engineer
+role3: Tech Lead
 location: Vimodrone (MI), Italy
 age: 33
 pronouns: He/Him
@@ -10,8 +11,9 @@ languages:
   - English (fluent)
 summary_human:
   "I’m a curious and rational person who believes growth comes from challenging your own ideas. I enjoy learning, exploring different viewpoints, and balancing technical thinking with empathy."
-summary_career:
-  "Senior Software Engineer with expertise in 3D Graphics, Game Engines, and visualization. I believe technical quality is the foundation of long-term success.
-
-
-  As a Tech Lead, I mentor teams to deliver robust, sustainable software while fostering collaboration, and keeping the human side of development in focus."
+summary_developer:
+  "Software Engineer with 8+ years of expertise.<br>I focused my career in 3D Graphics, Game Engines, and visualization, technologies that have become dominant in many key industries for their intrinsic power.
+  I believe technical quality is the foundation of long-term success and that it can only be achieved by a daily commitment to continuous improvement of the product."
+summary_leader:
+  "As a leader, I have experience both as direct responsible of a team and as a tech lead. I believe some values are essential to build a healthy and productive team and I
+  strive to promote them. I myself have a deep commitment to continuous learning and improvement though self-reflection and feedback."

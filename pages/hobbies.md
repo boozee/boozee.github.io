@@ -4,7 +4,6 @@ layout: default
 permalink: /hobbies/
 ---
 
-{% include section-heading.html title="Hobbies" %}
 <div class="grid grid-2">
   {% for h in site.data.hobbies.hobbies %}
     <div class="card">

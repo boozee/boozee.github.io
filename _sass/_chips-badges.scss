@@ -73,6 +73,10 @@ html[data-theme="light"] .tech-badge {
   box-sizing: border-box;
 }
 
+.cv-card-list .tech .chip:hover {
+  transform: translateY(-1px);
+}
+
 .cv-card-list .tech .chip-primary {
   border-color: var(--brand);
 }

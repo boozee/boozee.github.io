@@ -4,7 +4,11 @@
       <p class="eyebrow">WELCOME</p>
       <h1 class="hero-title">
         <span class="line">I’m {{ site.data.cv.name }}{% if site.data.cv.surname %} {{ site.data.cv.surname }}{% endif %}</span>
-        <span class="line accent">a developer who loves turning problems into solutions.</span>
+        <span class="accent">
+          <span class="rotator" data-rotator data-phrases='{{ site.data.hero_phrases | jsonify | escape }}' aria-live="polite" aria-atomic="true">
+            <span class="phrase">a developer who loves turning problems into solutions.</span>
+          </span>
+        </span>
       </h1>
 
       <div>
@@ -44,3 +48,89 @@
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  let activeRotators = [];
+
+  function destroyRotators(){
+    activeRotators.forEach(r => r.destroy());
+    activeRotators = [];
+  }
+
+  function initializeRotators(){
+    destroyRotators();
+    document.querySelectorAll('[data-rotator]').forEach(el => {
+      const phrases = readPhrases(el);
+      if (!phrases.length) return;
+      activeRotators.push(createRotator(el, phrases));
+    });
+  }
+
+  function readPhrases(el){
+    const raw = el.dataset.phrases;
+    if (!raw) return [];
+    try { return JSON.parse(raw); }
+    catch { return []; }
+  }
+
+  function createRotator(el, phrases, { delay = 3500 } = {}){
+    let i = 0, timer = null;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Ensure there is a .phrase node to update
+    let current = el.querySelector('.phrase');
+    if (!current){
+      current = document.createElement('span');
+      current.className = 'phrase';
+      el.appendChild(current);
+    }
+    current.textContent = phrases[0];
+
+    // Visibility control (don’t animate off-screen)
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting ? start() : stop());
+    }, { threshold: 0.2 });
+    io.observe(el);
+
+    function flip(to){
+      if (reduced){ current.textContent = to; return; }
+      const out = current.cloneNode(true);
+      out.classList.add('out'); // your CSS animates .out
+      el.appendChild(out);
+
+      current.textContent = to;
+      current.classList.add('in'); // your CSS animates .in
+
+      current.addEventListener('animationend', () => current.classList.remove('in'), { once: true });
+      out.addEventListener('animationend', () => out.remove(), { once: true });
+    }
+
+    function tick(){
+      i = (i + 1) % phrases.length;
+      flip(phrases[i]);
+    }
+    function start(){ stop(); timer = setInterval(tick, delay); }
+    function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+
+    // Pause when tab is hidden
+    function onVis(){ document.hidden ? stop() : start(); }
+    document.addEventListener('visibilitychange', onVis);
+
+    // Kick off if visible on load
+    if (el.getBoundingClientRect().top < innerHeight) start();
+
+    return {
+      destroy(){
+        stop();
+        io.disconnect();
+        document.removeEventListener('visibilitychange', onVis);
+      }
+    };
+  }
+
+  initializeRotators();
+
+  document.addEventListener('pjax:ready', initializeRotators);
+})();
+</script>

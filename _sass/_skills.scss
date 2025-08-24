@@ -2,15 +2,15 @@
   --ink: #e7eef9;
   --pill: #1b2640;
   --pillHover: #22305a;
-  --dotExpert: #6ee7a8;
-  --dotStrong: #60a5fa;
-  --dotWorking: #94a3b8;
+  --dotExpert: #FF8A1C;
+  --dotStrong: #60A5FA;
+  --dotWorking: #A8B2BD;
 }
 
 html[data-theme="light"] .skills3 {
-  --dotExpert: #ff6200;
-  --dotStrong: #0858b8;
-  --dotWorking: #9ea4ab;
+  --dotExpert: #E35D0A;
+  --dotStrong: #1F6FEB;
+  --dotWorking: #94A3B8;
 }
 
 .skills3 h2 {
@@ -23,7 +23,7 @@ html[data-theme="light"] .skills3 {
   color: var(--muted);
   font-size: .98rem;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
   top: 24px;
@@ -33,23 +33,38 @@ html[data-theme="light"] .skills3 {
 }
 
 .lvl-dot {
-  display: inline-block;
-  width: .75rem;
-  height: .75rem;
-  border-radius: 999px;
-  margin-right: .2rem;
+  --label: "";
+  --dot: transparent;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  font: 700 .8rem/1 system-ui;
+  line-height: 1;
+  color: var(--bg);
+  background: var(--dot);
+  margin-right: .25rem;
+  border: 1px solid var(--fg);
 }
 
-.lvl-dot.expert {
-  background: var(--dotExpert)
-}
-
-.lvl-dot.strong {
-  background: var(--dotStrong)
+.lvl-dot::before {
+  content: var(--label);
 }
 
 .lvl-dot.working {
-  background: var(--dotWorking)
+  --label: "W";
+  --dot: var(--dotWorking);
+}
+
+.lvl-dot.strong {
+  --label: "S";
+  --dot: var(--dotStrong);
+}
+
+.lvl-dot.expert {
+  --label: "E";
+  --dot: var(--dotExpert);
 }
 
 .skills3-groups {
@@ -113,21 +128,19 @@ html[data-theme="light"] .skills3 {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: .5ch;
+  gap: .4rem;
   padding: .48rem .78rem;
   border-radius: 999px;
-  background: var(--pill);
-  color: var(--ink);
+  background: none;
+  color: var(--fg);
   border: 1px solid rgba(255, 255, 255, 0.06);
   font-size: .98rem;
   line-height: 1;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  border-color: var(--brand);
 }
 
 .tag:hover {
   transform: translateY(-1px);
-  background: var(--pillHover);
-  border-color: rgba(255, 255, 255, 0.12)
 }
 
 .tags.big .tag {
@@ -137,17 +150,28 @@ html[data-theme="light"] .skills3 {
 
 .tag::before {
   content: "";
-  width: .55rem;
-  height: .55rem;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
+  font: 700 .8rem/1 system-ui;
+  color: var(--bg);
+  line-height: 1;
+}
+
+.tag.working::before {
+  content: "W";
   background: var(--dotWorking)
 }
 
 .tag.strong::before {
+  content: "S";
   background: var(--dotStrong)
 }
 
 .tag.expert::before {
+  content: "E";
   background: var(--dotExpert)
 }
 

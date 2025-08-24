@@ -1,3 +1,9 @@
+- name: Tetris 3D
+  description:
+     My '3D Interactive Graphics' course project, a non-playable demo of the Tetris game.<br> It features a 3D-rendered Tetris game, a navigable environment with dynamic shadows, post-process effects and shared-based animations.
+  tags: [Javascript, WebGL, ThreeJS, HTML]
+  repo: https://github.com/boozee/Tetris3D
+
 - name: This website
   description: Recursion anyone? This is my personal website, built with love and hosted on GitHub Pages.
   tags: [HTML, SCSS, JavaScript, Jekyll, PJAX, GitHub Pages, Docker]

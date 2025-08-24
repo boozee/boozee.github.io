@@ -1,17 +1,36 @@
 <div class="cv-card-list">
-  {% for e in site.data.education reversed %}
-    <div class="card">
-      <h3 style="margin:0;">{{ e.title }}</h3>
-      <p class="muted" style="margin:.25rem 0 0 0;">{{ e.school }}{% if e.year %} — {{ e.year }}{% endif %}</p>
-
-      {% if e.description %}
-        <p style="margin-top:.75rem;">{{ e.description }}</p>
-      {% endif %}
-
-      <table class="table" style="margin-top:.5rem;">
-        {% if e.thesis %}<tr><th>Thesis</th><td>{{ e.thesis }}</td></tr>{% endif %}
-        {% if e.grades %}<tr><th>Grades</th><td>{{ e.grades }}</td></tr>{% endif %}
-      </table>
+  {% for exp in site.data.education %}
+  <div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+      <div class="card-header-info">
+        <h3>{{ exp.title }}</h3>
+        <p class="muted">
+          {% if exp.school_url %}
+          <a href="{{ exp.school_url | strip }}" target="_blank" rel="noopener noreferrer">
+            {{ exp.school }}
+          </a>
+          {% endif %}
+        </p>
+      </div>
+      <div class="card-header-date muted">
+        {{ exp.period }}
+      </div>
     </div>
+
+    {% if exp.description %}
+    <p style="margin-top:.75rem;">{{ exp.description }}</p>
+    {% endif %}
+
+    <table class="table" style="margin-top:.5rem;">
+      {% if e.thesis %}<tr>
+        <th>Thesis</th>
+        <td>{{ exp.thesis }}</td>
+      </tr>{% endif %}
+      {% if e.grades %}<tr>
+        <th>Grades</th>
+        <td>{{ exp.grades }}</td>
+      </tr>{% endif %}
+    </table>
+  </div>
   {% endfor %}
 </div>

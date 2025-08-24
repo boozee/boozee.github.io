@@ -1,20 +1,30 @@
-- school: Liceo Scientifico N. Copernico (Udine)
-  title: High School Diploma in Science - PNI
-  description: Where I fell in love with programming, maths and logic. And when I started my long journey of self discovery.
-  thesis: "The communication during the 20th century"
-  grades: 86/100
-  year: 2011
-
 - school: University of Udine (Udine)
-  title: BSc. in Computer Science (3 years)
-  description: This is where I built my foundational knowledge and realised there was more to computing than just typing. 
-  thesis: "Analysis and development of an analytics web module for a commercial/touristic platform"
-  grades: 104/110
-  year: 2015
-  
-- school: University of Udine (Udine)
+  school_url: "https://www.uniud.it/"
   title: MSc. in Computer Science (2 years)
-  description: Here I discovered 3D graphics, Unreal Engine, complexity theory and burnout. But I'm glad I did it.
+  description: And here I found my path. I discovered Computer Graphics and fell in love with it and it's cousin 'Computational Geometry'.<br>
+               I deepened my knowledge of algorithms, data structures, and low-level programming, and I started to understand the complexity of real-time systems.<br><br>
+               I also had the chance to work on a research project about real-time visibility computation in 3D scenes, which made me understand the potential of these techniques.
+               The thesis was a challenging but rewarding experience that taught me a lot about problem-solving and perseverance.
   thesis: "Efficient Computation of Object Visibility in 3D Scenes"
   grades: 110/110 cum laude
-  year: 2017
+  period: 2015-2017
+
+- school: University of Udine (Udine)
+  school_url: "https://www.uniud.it/"
+  title: BSc. in Computer Science (3 years)
+  description: This is where I built my foundational knowledge and realised there was more to computing than just typing.<br>Maths. Lots of Maths.<br><br>
+              I particularly enjoyed Algorithms and Compilers courses, which made me take a look at the deep beauty of computer science.
+              Lots of inputs and possibilities, but I was still searching for my path.
+  thesis: "Analysis and development of an analytics web module for a commercial/touristic platform"
+  grades: 104/110
+  period: 2011-2015
+
+- school: Liceo Scientifico N. Copernico (Udine)
+  school_url: "https://www.liceocopernico.edu.it/"
+  title: High School Diploma in Science - PNI
+  description: Where I finally fell in love with sciences. And when I started my long journey of self discovery.<br>
+                It wasn't the easiest path, in our last year we were only nine students ("the excellence", they said), but in hindsight it gave me and headstart over the university years.<br>
+                Moreover, I now recognize that my curiosity and critical thinking were born there, mostly during philosophy classes.
+  thesis: "The communication during the 20th century"
+  grades: 86/100
+  period: 2006-2011

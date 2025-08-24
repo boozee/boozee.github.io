@@ -1,0 +1,32 @@
+<div class="cv-card-list">
+  {% for exp in site.data.other_experience %}
+  <div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+      <div class="card-header-info">
+        <h3>{{ exp.role }}</h3>
+        <p class="muted">
+          {% if exp.company_url %}
+          <a href="{{ exp.company_url | strip }}" target="_blank" rel="noopener noreferrer">
+            {{ exp.company }}
+          </a>
+          {% if exp.company_note %}<span> — {{ exp.company_note }}</span>{% endif %}
+          {% else %}
+          {{ exp.company }}
+          {% endif %}
+        </p>
+      </div>
+      <div class="card-header-date muted">
+        {{ exp.period }}
+      </div>
+    </div>
+
+    {% if exp.bullets %}
+    <ul class="list">
+      {% for b in exp.bullets %}
+      <li>{{ b }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

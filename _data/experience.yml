@@ -24,6 +24,18 @@
     - "Collaborated with cross-functional teams and Scrum figures to translate roadmaps into reality."
     - "Continuous improvement of the intra and inter-team processes, focusing on efficiency and transparency."
     - "Team-recognized for being inspirational and pushing for the important topics."
+
+- company: E-THICAL Digital Fashion
+  company_url: https://www.linkedin.com/company/fashionmind/
+  role: External Technical Consultant
+  period: 2020
+  tech_primary: [Unreal Engine, C++, Miro]
+  bullets:
+    - "New startup in the digital fashion space, focused on sustainability and innovation through user-centric digital design."
+    - "External consultant for the risk and feasability analysis of the startup's product."
+    - "Evaluation and proposal of a technological stack and architecture for the product."
+    - "Reasearch and PoC of real-time 3D technologies for phisically-based fashion visualization inside Unreal Engine."
+    - "Validation of the technical aspects of the product pitch in the context of the UE funding program 'Horizon 2020'"
       
 - company: SPACE1 (OverIT)
   company_note: "Company was acquired by OverIT in 2021"

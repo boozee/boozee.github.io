@@ -1,5 +1,28 @@
 ---
+layout: default
 title: CV
-layout: cv
 permalink: /cv/
 ---
+
+<div class="tabs">
+  <button class="tab-button active" data-tab="experience">Experience</button>
+  <button class="tab-button" data-tab="education">Education</button>
+  <button class="tab-button" data-tab="certifications">Certifications</button>
+  <button class="tab-button" data-tab="other">Other</button>
+</div>
+
+<div class="tab-content is-active" id="experience">
+  {% include experience-list.html %}
+</div>
+
+<div class="tab-content" id="education">
+  {% include education-list.html %}
+</div>
+
+<div class="tab-content" id="certifications">
+  {% include certifications.html %}
+</div>
+
+<div class="tab-content" id="other">
+  {% include other-experience-list.html %}
+</div>

@@ -1,30 +1,29 @@
-hobbies:
-  - title: Cycling
-    blurb: Weekend rides since young age, now equipped with a Cannondale Tesoro NEO X 3 for longer journeys.
-          My longest ride? Up to Gemona's hills, about 100km round trip.
-    icon: icon-bike
-  - title: Economy
-    blurb: From studying about the shenanigans of macroeconomics to following the latest news, I find economics fascinating.
-          I also enjoy discussing it with friends and family, even if they don't always share my enthusiasm.
-          I'm an active practitioner of personal finance, not to become rich, but for the fun I find in such a practical science.
-    icon: icon-economy
-  - title: Technology
-    blurb: Maybe obvious, maybe not. I build my own PCs and love to tinker with hardware and software.
-          I used to help manage a tech forum, and I still enjoy following the latest trends in the industry.
-    icon: icon-pc
-  - title: Reading
-    blurb: >
-          Part-time avid reader, I love to the chrime novels challenge but among my favourites there are all kind of books, from science fiction to philosophy.
-          Two unrequested recommendations: "The Foundation" by I. Asimov and "Crime and Punishment" by F. Dostoevskij.
-    icon: icon-reading
-  - title: Videogames
-    blurb: When a boy it was my greatest passion, I still remember my first console, a Game Boy Advance with the completely random Dungeons&Dragons game.
-          Now I play less, although I'm particularly fascinated by simulations and city-builders.
-    icon: icon-gameboy
-  - title: Music
-    blurb: Once a metalhead, then an electronic music lover. I’ve stopped giving myself labels, I just love music.. You can explore some of them in the embedded playlist below.
-    icon: icon-microphone
-  - title: Sofa athlete
-    blurb: There's pretty much no sport I don't like, and I especially love to follow the 'minor' ones during the Olympic weeks.
-          That said, my favourites are F1, Tennis, and American Football.
-    icon: icon-sport
+- title: Cycling
+  blurb: Weekend rides since young age, now equipped with a Cannondale Tesoro NEO X 3 for longer journeys.
+        My longest ride? Up to Gemona's hills, about 100km round trip.
+  icon: icon-bike
+- title: Economy
+  blurb: From studying about the shenanigans of macroeconomics to following the latest news, I find economics fascinating.
+        I also enjoy discussing it with friends and family, even if they don't always share my enthusiasm.
+        I'm an active practitioner of personal finance, not to become rich, but for the fun I find in such a practical science.
+  icon: icon-economy
+- title: Technology
+  blurb: Maybe obvious, maybe not. I build my own PCs and love to tinker with hardware and software.
+        I used to help manage a tech forum, and I still enjoy following the latest trends in the industry.
+  icon: icon-pc
+- title: Reading
+  blurb: >
+        Part-time avid reader, I love to the chrime novels challenge but among my favourites there are all kind of books, from science fiction to philosophy.
+        Two unrequested recommendations: "The Foundation" by I. Asimov and "Crime and Punishment" by F. Dostoevskij.
+  icon: icon-reading
+- title: Videogames
+  blurb: When a boy it was my greatest passion, I still remember my first console, a Game Boy Advance with the completely random Dungeons&Dragons game.
+        Now I play less, although I'm particularly fascinated by simulations and city-builders.
+  icon: icon-gameboy
+- title: Music
+  blurb: Once a metalhead, then an electronic music lover. I’ve stopped giving myself labels, I just love music.. You can explore some of them in the embedded playlist below.
+  icon: icon-microphone
+- title: Sofa athlete
+  blurb: There's pretty much no sport I don't like, and I especially love to follow the 'minor' ones during the Olympic weeks.
+        That said, my favourites are F1, Tennis, and American Football.
+  icon: icon-sport

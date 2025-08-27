@@ -1,11 +1,23 @@
 - id: icon-bike
   file: icons/icon-bike.svg
+- id: icon-cloud
+  file: icons/icon-cloud.svg
+- id: icon-cube
+  file: icons/icon-cube.svg
+- id: icon-economy
+  file: icons/icon-economy.svg
 - id: icon-email
   file: icons/icon-email.svg
 - id: icon-gameboy
   file: icons/icon-gameboy.svg
 - id: icon-github
   file: icons/icon-github.svg
+- id: icon-glasses
+  file: icons/icon-glasses.svg
+- id: icon-globe
+  file: icons/icon-globe.svg
+- id: icon-hammer
+  file: icons/icon-hammer.svg
 - id: icon-instagram
   file: icons/icon-instagram.svg
 - id: icon-link
@@ -14,32 +26,16 @@
   file: icons/icon-linkedin.svg
 - id: icon-microphone
   file: icons/icon-microphone.svg
-- id: icon-pc
-  file: icons/icon-pc.svg
-- id: icon-reading
-  file: icons/icon-reading.svg
-- id: icon-sport
-  file: icons/icon-sport.svg
-- id: icon-spotify
-  file: icons/icon-spotify.svg
-- id: icon-economy
-  file: icons/icon-economy.svg
-- id: icon-cloud
-  file: icons/icon-cloud.svg
-- id: icon-cube
-  file: icons/icon-cube.svg
-- id: icon-glasses
-  file: icons/icon-glasses.svg
-- id: icon-globe
-  file: icons/icon-globe.svg
-- id: icon-hammer
-  file: icons/icon-hammer.svg
 - id: icon-monitor
   file: icons/icon-monitor.svg
+- id: icon-pc
+  file: icons/icon-pc.svg
 - id: icon-pen-paper
   file: icons/icon-pen-paper.svg
 - id: icon-puzzle
   file: icons/icon-puzzle.svg
+- id: icon-reading
+  file: icons/icon-reading.svg
 - id: icon-running
   file: icons/icon-running.svg
 - id: icon-sage
@@ -48,3 +44,9 @@
   file: icons/icon-smartphone.svg
 - id: icon-socket
   file: icons/icon-socket.svg
+- id: icon-sport
+  file: icons/icon-sport.svg
+- id: icon-spotify
+  file: icons/icon-spotify.svg
+- id: icon-theme
+  file: icons/icon-theme.svg

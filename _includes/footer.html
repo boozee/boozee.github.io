@@ -2,8 +2,8 @@
   <div class="container">
     <div>© <span id="year"></span> {{ site.author }}.</div>
     <span class="site-version">
-      v{{ site.version.major }}.{{ site.version.minor }}.{%- if site.github.sha -%}{{ site.github.sha | slice: 0, 7
-      }}{%- else -%}0{%- endif -%}
+      v{{ site.version.major }}.{{ site.version.minor }}.{%- if site.data.version.sha -%}{{ site.data.version.sha |
+      slice: 0, 7 }}{%- else -%}0{%- endif -%}
     </span>
     <div>
       This site uses only cookies essential for its operation (e.g., saving your preferences).

@@ -15,7 +15,8 @@
    PJAX Fade (main content only)
    ================================ */
 main#main { 
-  transition: opacity .18s ease;
+  transition: var(--theme-transition),
+              opacity .18s ease;
   opacity: 1;
 }
 

@@ -11,6 +11,11 @@
   --card: #fff;
   --border: #e2e8f0;
   --border-strong: #d0d7e2;
+  --theme-transition: background-color 0.8s ease-in-out,
+                      color 0.8s ease-in-out,
+                      border-color 0.8s ease-in-out,
+                      box-shadow 0.8s ease-in-out,
+                      border 0.8s ease-in-out;
 }
 
 :root[data-theme="dark"] {

@@ -7,7 +7,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.3s ease;
+  transition: var(--theme-transition),
+              all 0.3s ease;
   max-width: 100%;
   width: auto;
 
@@ -98,7 +99,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: var(--theme-transition),
+              all 0.2s ease;
 
   &:hover {
     background: var(--border);
@@ -126,7 +128,8 @@
   flex-shrink: 0;
 
   .music-btn svg {
-    transition: transform 0.3s ease;
+    transition: var(--theme-transition),
+                transform 0.3s ease;
   }
 }
 
@@ -227,7 +230,8 @@
   justify-content: space-between;
   padding: 12px 24px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: var(--theme-transition),
+              background-color 0.2s ease;
 
   &:hover {
     background: var(--border);
@@ -244,7 +248,8 @@
 
 .music-track-play {
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: var(--theme-transition),
+              opacity 0.2s ease;
 
   .music-track:hover & {
     opacity: 1;
@@ -270,7 +275,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: var(--theme-transition),
+              all 0.2s ease;
 
   &:hover {
     background: var(--border);

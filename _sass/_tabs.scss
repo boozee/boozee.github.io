@@ -14,7 +14,8 @@
   padding: .5rem 0;
   cursor: pointer;
   position: relative;
-  transition: color .2s ease;
+  transition: var(--theme-transition),
+              color .2s ease;
 }
 
 .tab-button:hover {
@@ -35,7 +36,8 @@
   width: 0;
   background: var(--brand);
   border-radius: 3px;
-  transition: width .25s ease;
+  transition: var(--theme-transition),
+              width .25s ease;
 }
 
 .tab-button.active::after {

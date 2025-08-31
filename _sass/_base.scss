@@ -2,6 +2,13 @@
 @import "typography";
 @import "utilities";
 @import "animations";
+@import "variables";
+
+*,
+*::before,
+*::after {
+  transition: var(--theme-transition);
+}
 
 html {
   background: var(--bg);
@@ -15,14 +22,10 @@ body {
   position: relative;
   color: var(--fg);
   padding-bottom: 72px;
-
-  /* Space for fixed bottom bar */
 }
 
 @media (width <= 768px) {
   body {
     padding-bottom: 120px;
-
-    /* Adjust for smaller bottom bar height on mobile */
   }
 }

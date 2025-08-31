@@ -6,7 +6,9 @@ html {
 a {
   color: var(--brand);
   text-decoration: none;
-  transition: color .2s ease, transform .2s ease;
+  transition: var(--theme-transition),
+              color .2s ease,
+              transform .2s ease;
 }
 
 a:hover {

@@ -29,7 +29,9 @@
   color: var(--fg);
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
-  transition: border-color .2s ease, color .2s ease;
+  transition: var(--theme-transition),
+              border-color .2s ease,
+              color .2s ease;
   text-decoration: none;
 }
 

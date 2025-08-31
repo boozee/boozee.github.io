@@ -187,7 +187,9 @@
   text-align: left;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity .18s ease, transform .18s ease;
+  transition: var(--theme-transition),
+              opacity .18s ease,
+              transform .18s ease;
 }
 
 :root[data-theme="light"] .photo-overlay {

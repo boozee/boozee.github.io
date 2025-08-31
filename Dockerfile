@@ -1,13 +1,25 @@
-# Use official Jekyll image
-FROM jekyll/jekyll:latest
+# Use a specific, stable version of the official Ruby image
+FROM ruby:3.1.4-alpine
 
-# Install dependencies from Gemfile
-COPY Gemfile .
-RUN bundle install
+# Install build-essential for compiling gems, and libc6-compat for native extensions
+RUN apk add --no-cache build-essential libc6-compat
 
-# Expose ports
+# Set the working directory
+WORKDIR /srv/jekyll
+
+# Copy only the Gemfiles to leverage Docker layer caching
+COPY Gemfile Gemfile.lock ./
+
+# Configure Bundler to install gems locally and ensure it has enough jobs
+RUN bundle config set --local path 'vendor/bundle' && \
+    bundle config set --local jobs 4 && \
+    bundle install
+
+# Copy the rest of your application code
+COPY . .
+
+# Expose the Jekyll port
 EXPOSE 4000
-EXPOSE 35729
 
-# Default command (same as docker-compose)
-CMD ["jekyll", "serve", "--livereload", "--force_polling", "--host", "0.0.0.0"]
+# The final command to run the server, using bundle exec to ensure correct gem versions
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]

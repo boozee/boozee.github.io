@@ -10,7 +10,7 @@ timezone: Europe/Rome
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
+  - jekyll-github-metadata
 
 # Collections (if needed later)
 collections:
@@ -30,3 +30,8 @@ defaults:
 # Allow Sass to be used
 sass:
   style: compressed
+
+# Version
+version:
+  major: 1
+  minor: 0

@@ -1,12 +1,17 @@
 <footer class="footer">
   <div class="container">
     <div>© <span id="year"></span> {{ site.author }}.</div>
+    <span class="site-version">
+      v{{ site.version.major }}.{{ site.version.minor }}.{%- if site.github.sha -%}{{ site.github.sha | slice: 0, 7
+      }}{%- else -%}0{%- endif -%}
+    </span>
     <div>
       This site uses only cookies essential for its operation (e.g., saving your preferences).
       No tracking or advertising cookies are used.
       <a href="{{ site.baseurl }}/privacy">Learn more</a>.
     </div>
-    <div>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
+    <div>This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+        Attribution 4.0 International License</a>.</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </div>
 </footer>

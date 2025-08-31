@@ -17,7 +17,9 @@
   line-height: 1.2;
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: var(--theme-transition),
+              transform .15s ease,
+              box-shadow .15s ease;
   background: none;
   height: auto;
 }

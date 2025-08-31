@@ -294,7 +294,7 @@
   }
 }
 
-@media (width <=768px) {
+@media (max-width:768px) {
   .music-player {
     max-width: 100%;
     min-width: 300px;

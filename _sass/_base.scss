@@ -24,7 +24,7 @@ body {
   padding-bottom: 72px;
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   body {
     padding-bottom: 120px;
   }

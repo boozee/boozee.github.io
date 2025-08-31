@@ -92,7 +92,7 @@ hr {
   padding: 0 .08em;
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   h1::after {
     width: 52px;
   }

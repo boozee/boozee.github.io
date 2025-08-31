@@ -1,9 +1,9 @@
+# In Gemfile
+
 source "https://rubygems.org"
 
-# Pin to GitHub Pages to match their build environment
+# This single gem will pull in the correct, compatible versions of everything:
+# - Jekyll (~> 3.9.3)
+# - The stable jekyll-sass-converter (~> 2.2.0)
+# - All the other necessary plugins like jekyll-seo-tag, etc.
 gem "github-pages", group: :jekyll_plugins
-
-# Optional: used by _config.yml
-gem "jekyll-seo-tag"
-gem "jekyll-sitemap"
-gem "jekyll-feed"

@@ -16,7 +16,7 @@
   padding: 0.75rem 1rem;
 }
 
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .section {
     padding: .75rem 1rem;
   }

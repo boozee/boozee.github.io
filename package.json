@@ -1,12 +1,12 @@
 {
   "scripts": {
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:yaml && npm run lint:md && npm run lint:html",
-    "lint:js": "eslint \"assets/js/**/*.js\"",
-    "lint:fix": "npm run lint:js -- --fix && stylelint \"_sass/**/*.scss\" --fix",
-    "lint:scss": "stylelint \"_sass/**/*.scss\"",
-    "lint:yaml": "eslint \"**/*.{yml,yaml}\" --no-error-on-unmatched-pattern",
-    "lint:md": "markdownlint \"**/*.md\" --ignore \"_site/**\" --ignore \"node_modules/**\" --ignore \"memory-bank/**\"",
-    "lint:html": "html-validate \"_site/**/*.html\""
+    "lint:js": "eslint --config configs/eslint.config.js \"assets/js/**/*.js\"",
+    "lint:fix": "eslint --config configs/eslint.config.js \"assets/js/**/*.js\" --fix && stylelint --config configs/stylelint.config.js \"_sass/**/*.scss\" --fix",
+    "lint:scss": "stylelint --config configs/stylelint.config.js \"_sass/**/*.scss\"",
+    "lint:yaml": "eslint --config configs/eslint.config.js \"**/*.{yml,yaml}\" --no-error-on-unmatched-pattern",
+    "lint:md": "markdownlint --config configs/markdownlint.jsonc \"**/*.md\" --ignore \"_site/**\" --ignore \"node_modules/**\" --ignore \"memory-bank/**\"",
+    "lint:html": "html-validate --config configs/htmlvalidate.js \"_site/**/*.html\""
   },
   "devDependencies": {
     "eslint": "^9.10.0",

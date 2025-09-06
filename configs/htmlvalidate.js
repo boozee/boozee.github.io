@@ -14,15 +14,14 @@ module.exports = {
     "no-implicit-button-type": "warn",
     // Icon-only buttons may not have visible text; reduce to a warning
     "text-content": "warn",
-    // Some pages intentionally start at h2/h3; don't enforce initial <h1>
-    "heading-level": "off",
-    // Use lowercase doctype as in templates; keep as a warning
+    // Use lowercase doctype like in templates
     "doctype-style": ["warn", { "style": "lowercase" }],
-    // Mixed sources (Jekyll plugins) may produce <meta/> etc.; don't enforce
+    // Mixed sources may produce <meta/> etc.; don't enforce
     "void-style": "off",
-    // Jekyll often injects attributes/classes; allow inline styles if needed
-    "no-inline-style": "off",
     // Do not require SRI for local or templated scripts in this project
-    "require-sri": "off"
+    "require-sri": "off",
+    // Some pages intentionally start at h2/h3; don't enforce initial <h1>
+    "heading-level": "off"
   }
 };
+

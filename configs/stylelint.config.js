@@ -15,3 +15,4 @@ export default {
     "alpha-value-notation": "number"
   }
 };
+

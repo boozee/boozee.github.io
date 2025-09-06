@@ -2,6 +2,7 @@
 // Uses browser globals for site JS under assets/, and Node for configs
 
 const yml = require("eslint-plugin-yml");
+
 /** @type {import('eslint').Linter.FlatConfig[]} */
 module.exports = [
   // Global ignores (replacement for .eslintignore in flat config)
@@ -80,20 +81,6 @@ module.exports = [
         return [];
       }
     })()
-  ),
-
-  // Node/CommonJS for config files
-  {
-    files: ["eslint.config.js", "stylelint.config.js"],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "commonjs",
-      globals: {
-        require: "readonly",
-        module: "readonly",
-        __dirname: "readonly",
-        process: "readonly"
-      }
-    }
-  }
+  )
 ];
+

@@ -52,11 +52,12 @@
 
 .rotator {
   --lines: 2;
+
   display: inline-block;
   position: relative;
   white-space: normal;
   line-height: 1.15;
-  inline-size: Min(36ch, 100%);
+  inline-size: min(36ch, 100%);
   min-height: calc(var(--lines) * 1lh);
 }
 
@@ -76,28 +77,28 @@
 }
 
 .rotator .phrase.in {
-  animation: heroIn .28s ease both;
+  animation: hero-in .28s ease both;
 }
 
 .rotator .phrase.out {
   position: absolute;
   inset: 0;
-  animation: heroOut .28s ease both;
+  animation: hero-out .28s ease both;
 }
 
-@media (max-width: 560px) {
+@media (width <= 560px) {
   .rotator {
     --lines: 3;
   }
 }
 
-@media (max-width: 360px) {
+@media (width <= 360px) {
   .rotator {
     --lines: 4;
   }
 }
 
-@keyframes heroIn {
+@keyframes hero-in {
   from {
     opacity: 0;
     transform: translateY(.35em)
@@ -109,7 +110,7 @@
   }
 }
 
-@keyframes heroOut {
+@keyframes hero-out {
   from {
     opacity: 1;
     transform: translateY(0)
@@ -188,7 +189,7 @@
   margin-top: 6px;
 }
 
-@media (max-width:992px) {
+@media (width <=992px) {
   .hero-content {
     grid-template-columns: 3fr 2fr;
     gap: 32px;
@@ -199,7 +200,7 @@
   }
 }
 
-@media (max-width:768px) {
+@media (width <=768px) {
   .hero-content {
     grid-template-columns: 1fr;
     gap: 24px;

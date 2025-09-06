@@ -1,16 +1,16 @@
 .skills3 {
   --ink: #e7eef9;
   --pill: #1b2640;
-  --pillHover: #22305a;
-  --dotExpert: #FF8A1C;
-  --dotStrong: #60A5FA;
-  --dotWorking: #A8B2BD;
+  --pill-hover: #22305a;
+  --dot-expert: #FF8A1C;
+  --dot-strong: #60A5FA;
+  --dot-working: #A8B2BD;
 }
 
 html[data-theme="light"] .skills3 {
-  --dotExpert: #E35D0A;
-  --dotStrong: #1F6FEB;
-  --dotWorking: #94A3B8;
+  --dot-expert: #E35D0A;
+  --dot-strong: #1F6FEB;
+  --dot-working: #94A3B8;
 }
 
 .skills3 h2 {
@@ -35,6 +35,7 @@ html[data-theme="light"] .skills3 {
 .lvl-dot {
   --label: "";
   --dot: transparent;
+
   display: inline-grid;
   place-items: center;
   width: 1.5rem;
@@ -54,17 +55,17 @@ html[data-theme="light"] .skills3 {
 
 .lvl-dot.working {
   --label: "W";
-  --dot: var(--dotWorking);
+  --dot: var(--dot-working);
 }
 
 .lvl-dot.strong {
   --label: "S";
-  --dot: var(--dotStrong);
+  --dot: var(--dot-strong);
 }
 
 .lvl-dot.expert {
   --label: "E";
-  --dot: var(--dotExpert);
+  --dot: var(--dot-expert);
 }
 
 .skills3-groups {
@@ -162,17 +163,17 @@ html[data-theme="light"] .skills3 {
 
 .tag.working::before {
   content: "W";
-  background: var(--dotWorking)
+  background: var(--dot-working)
 }
 
 .tag.strong::before {
   content: "S";
-  background: var(--dotStrong)
+  background: var(--dot-strong)
 }
 
 .tag.expert::before {
   content: "E";
-  background: var(--dotExpert)
+  background: var(--dot-expert)
 }
 
 .tag.working {

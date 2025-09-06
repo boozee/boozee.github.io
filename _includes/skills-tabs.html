@@ -1,6 +1,6 @@
 {% assign data = site.data.skills %}
 
-<section class="skills3" aria-labelledby="skills-title"> 
+<section class="skills3" aria-label="{{ page.title | default: 'Skills' }}"> 
 
   <div class="tabs" role="tablist" aria-label="Skill sections">
     {% for section in data.sections %}

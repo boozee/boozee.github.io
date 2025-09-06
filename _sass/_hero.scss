@@ -3,14 +3,6 @@
   background: none;
 }
 
-.hero-bg {
-  background: radial-gradient(120% 120% at 80% 20%, rgba(29, 78, 216, 0.5) 0%, transparent 50%);
-}
-
-:root[data-theme="dark"] .hero-bg {
-  background: radial-gradient(120% 120% at 80% 20%, rgba(122, 162, 255, 0.5) 0%, transparent 50%);
-}
-
 .hero-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -51,10 +43,6 @@
 
 .hero-title .line {
   display: block;
-}
-
-.hero-title .name {
-  color: var(--fg);
 }
 
 .hero-title .accent {
@@ -131,20 +119,6 @@
     opacity: 0;
     transform: translateY(-.35em)
   }
-}
-
-.badge-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  margin: 8px 0 2px;
-}
-
-.badge-row .badge {
-  font-size: 0.85rem;
-  padding: .35rem .8rem;
 }
 
 .hero-subtext {
@@ -229,15 +203,6 @@
   .hero-content {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-
-  .badge-row {
-    gap: 6px;
-  }
-
-  .badge-row .badge {
-    font-size: 0.82rem;
-    padding: .3rem .7rem;
   }
 
   .profile-photo {

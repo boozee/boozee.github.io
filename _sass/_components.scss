@@ -29,14 +29,6 @@
   box-shadow: 0 1px 0 var(--border), 0 1px 8px var(--border-strong) inset;
 }
 
-.btn-theme .icon-theme {
-  display: inline-block;
-}
-
-.btn-theme .icon-theme path {
-  fill: currentcolor;
-}
-
 .btn-theme:hover {
   transform: translateY(-1px);
 }

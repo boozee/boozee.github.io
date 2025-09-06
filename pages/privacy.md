@@ -7,6 +7,7 @@ permalink: /privacy/
 ## Cookies
 
 This website uses only strictly necessary cookies, such as:
+
 - Remembering your theme preference (light/dark mode)
 - Preserving certain interface states between visits
 

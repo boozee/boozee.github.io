@@ -9,7 +9,7 @@ permalink: /hobbies/
     <div class="card">
       <svg width="26" height="26" class="icon hobby-icon">
         ```liquid
-        <use xlink:href="#{{ h.icon }}"></use>   
+        <use xlink:href="#{{ h.icon }}"></use>
       ```
       </svg>
       <h3>{{ h.title }}</h3>

@@ -16,7 +16,7 @@ function setupTabListeners() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   setupTabListeners();
 });
 

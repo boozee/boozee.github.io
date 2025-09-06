@@ -29,7 +29,7 @@
 
   async function fetchPage(url) {
     const res = await fetch(url, { headers: { "X-Requested-With": "pjax" } });
-    if (!res.ok) throw new Error("Fetch failed: " + url);
+    if (!res.ok) throw new Error(`Fetch failed: ${  url}`);
     const html = await res.text();
     const doc = new DOMParser().parseFromString(html, "text/html");
     return { title: doc.title, main: getMain(doc) };
@@ -96,7 +96,7 @@
     // Show toggle button only on coarse pointers (touch)
     if (window.matchMedia('(pointer:coarse)').matches) {
       btn.style.display = 'inline-block';
-      btn.addEventListener('click', e => {
+      btn.addEventListener('click', _ => {
         const open = card.classList.toggle('is-open');
         btn.setAttribute('aria-expanded', open);
       });

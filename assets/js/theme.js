@@ -2,12 +2,12 @@
   const KEY = 'theme';
   function setCookie(name, value) {
     // 1 year, path=/ so it applies to all pages, SameSite=Lax for safety
-    document.cookie = name + '=' + encodeURIComponent(value) +
-      '; Max-Age=' + (60 * 60 * 24 * 365) + '; Path=/; SameSite=Lax';
+    document.cookie = `${name  }=${  encodeURIComponent(value) 
+      }; Max-Age=${  60 * 60 * 24 * 365  }; Path=/; SameSite=Lax`;
   }
   function setTheme(next) {
     document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem(KEY, next); } catch (e) {}
+    try { localStorage.setItem(KEY, next); } catch (_) {}
     setCookie(KEY, next);
   }
   document.addEventListener('click', (e) => {

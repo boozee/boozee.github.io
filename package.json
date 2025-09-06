@@ -1,5 +1,19 @@
 {
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:scss && npm run lint:yaml && npm run lint:md && npm run lint:html",
+    "lint:js": "eslint \"assets/js/**/*.js\"",
+    "lint:fix": "npm run lint:js -- --fix && stylelint \"_sass/**/*.scss\" --fix",
+    "lint:scss": "stylelint \"_sass/**/*.scss\"",
+    "lint:yaml": "eslint \"**/*.{yml,yaml}\" --no-error-on-unmatched-pattern",
+    "lint:md": "markdownlint \"**/*.md\" --ignore \"_site/**\" --ignore \"node_modules/**\" --ignore \"memory-bank/**\"",
+    "lint:html": "html-validate \"_site/**/*.html\""
+  },
   "devDependencies": {
+    "eslint": "^9.10.0",
+    "eslint-plugin-yml": "^1.14.0",
+    "html-validate": "^8.0.0",
+    "markdownlint-cli": "^0.41.0",
+    "stylelint": "^16.8.0",
     "stylelint-config-standard": "^39.0.0",
     "stylelint-config-standard-scss": "^15.0.1"
   }

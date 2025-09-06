@@ -1,0 +1,12 @@
+// Markdownlint configuration for docs and content
+{
+  // Start from defaults
+  "default": true,
+  // Allow longer lines for content-driven prose
+  "MD013": false,
+  // Allow inline HTML (common in Jekyll content)
+  "MD033": false,
+  // Don’t require first line to be a top-level heading
+  "MD041": false
+}
+

@@ -74,20 +74,28 @@
 
 <script>
 function initializeMoreButtons() {
-  const cardList = document.querySelector('.cv-card-list');
-  if (cardList) {
-    cardList.addEventListener('click', (event) => {
-      const btn = event.target.closest('.chip-more');
-      if (!btn) return;
+  // Prevent duplicate listeners on PJAX/nav changes
+  if (document.documentElement.dataset.moreInit === '1') return;
 
-      const more = document.getElementById(btn.getAttribute('aria-controls'));
-      if (!more) return;
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    // Guard: only Elements have closest()
+    if (!(target instanceof Element)) return;
 
-      more.hidden = false;
-      btn.setAttribute('aria-expanded', 'true');
-      btn.remove();
-    });
-  }
+    const btn = target.closest('.chip-more');
+    if (!btn) return;
+
+    const controls = btn.getAttribute('aria-controls');
+    if (!controls) return;
+    const more = document.getElementById(controls);
+    if (!more) return;
+
+    more.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    btn.remove();
+  });
+
+  document.documentElement.dataset.moreInit = '1';
 }
 
 // Initialize on initial page load

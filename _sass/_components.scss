@@ -38,6 +38,11 @@
   outline-offset: 2px;
 }
 
+/* Theme toggle icon swap */
+.btn-theme .icon-moon { display: none; }
+:root[data-theme="dark"] .btn-theme .icon-moon { display: inline; }
+:root[data-theme="dark"] .btn-theme .icon-sun { display: none; }
+
 code,
 kbd {
   background: var(--card);

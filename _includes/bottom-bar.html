@@ -104,7 +104,10 @@
     </script>
     <button class="btn btn-theme" data-theme-toggle aria-label="Toggle color theme">
       {% assign theme_icon = site.data.icons | where: "id", "icon-theme" | first %}
-      <svg width="26" height="26" class="icon">
+      <svg width="26" height="26" class="icon icon-sun" aria-hidden="true">
+        <use xlink:href="#icon-sun"></use>
+      </svg>
+      <svg width="26" height="26" class="icon icon-moon" aria-hidden="true">
         <use xlink:href="#icon-theme"></use>
       </svg>
       <span>Theme</span>

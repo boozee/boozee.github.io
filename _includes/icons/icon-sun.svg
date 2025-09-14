@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g fill="currentColor">
+    <circle cx="12" cy="12" r="5" />
+    <rect x="11" y="1" width="2" height="3" rx="1" />
+    <rect x="11" y="20" width="2" height="3" rx="1" />
+    <rect x="1" y="11" width="3" height="2" rx="1" />
+    <rect x="20" y="11" width="3" height="2" rx="1" />
+    <!-- Diagonal rays -->
+    <rect x="11" y="1" width="2" height="3" rx="1" transform="rotate(45 12 12)" />
+    <rect x="11" y="1" width="2" height="3" rx="1" transform="rotate(135 12 12)" />
+    <rect x="11" y="1" width="2" height="3" rx="1" transform="rotate(225 12 12)" />
+    <rect x="11" y="1" width="2" height="3" rx="1" transform="rotate(315 12 12)" />
+  </g>
+</svg>

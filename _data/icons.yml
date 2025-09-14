@@ -50,3 +50,5 @@
   file: icons/icon-spotify.svg
 - id: icon-theme
   file: icons/icon-theme.svg
+- id: icon-sun
+  file: icons/icon-sun.svg

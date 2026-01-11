@@ -1,15 +1,24 @@
 - name: Tetris 3D
   description:
      My '3D Interactive Graphics' course project, a non-playable demo of the Tetris game.<br> It features a 3D-rendered Tetris game, a navigable environment with dynamic shadows, post-process effects and shared-based animations.
+  category: personal
   tags: [Javascript, WebGL, ThreeJS, HTML]
   repo: https://github.com/boozee/Tetris3D
 
 - name: This website
   description: Recursion anyone? This is my personal website, built with love and hosted on GitHub Pages.
+  category: personal
   tags: [HTML, SCSS, JavaScript, Jekyll, PJAX, GitHub Pages, Docker]
   repo: https://github.com/boozee/boozee.github.io
 
 - name: Undisclosed Secret Project
-  description: It's a game, I'm not working on it alone, and I can't talk about it. Stay tuned!
-  tags: [Unreal Engine, C++]
+  description: It's a game, I'm doing research for the design phase, and I can't talk about it. Stay tuned!
+  category: personal
+  tags: [Game]
   repo: https://youtu.be/dQw4w9WgXcQ?si=W96n_V6WwUMS_jIg
+
+- name: Godot
+  description: Contributions to the open-source Godot Engine.
+  category: contributor
+  tags: [Godot Engine, C++]
+  repo: https://github.com/godotengine/godot

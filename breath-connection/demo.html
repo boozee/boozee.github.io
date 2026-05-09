@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breath Connection Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/breath-connection/assets/demo-s8qqrpEE.js"></script>
+  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-B2w7xnxx.css">
+</head>
+<body data-mode="play" data-app="demo">
+  <header id="topbar">
+    <div class="brand">
+      <span class="title">Breath Connection</span>
+      <span class="subtitle">Demo</span>
+    </div>
+
+    <div class="top-controls">
+      <select id="level-select" class="level-select"></select>
+      <button id="reset-btn" class="btn slim">Reset</button>
+      <div class="hex-size-group">
+        <button class="hex-preset-btn" data-hex-preset="S">S</button>
+        <button class="hex-preset-btn active" data-hex-preset="M">M</button>
+        <button class="hex-preset-btn" data-hex-preset="L">L</button>
+      </div>
+    </div>
+
+    <div id="victory-banner" hidden>All seeds connected</div>
+  </header>
+
+  <main id="main" class="demo-main">
+    <section id="canvas-wrap">
+      <canvas id="hexCanvas"></canvas>
+      <div class="canvas-fab-row">
+        <button id="undo-btn" class="undo-fab" disabled aria-label="Undo move" title="Undo move">
+          <span class="undo-fab-icon">&#8630;</span>
+        </button>
+        <button id="toggle-coords-btn" class="canvas-fab text" title="Show coordinates">Coords</button>
+      </div>
+      <div id="play-hud">
+        <div class="hud-item"><span class="hud-label">Seeds</span><span id="hud-seeds" class="hud-value">0</span></div>
+        <div class="hud-item"><span class="hud-label">Links</span><span id="hud-links" class="hud-value">0</span></div>
+        <div class="hud-item"><span class="hud-label">Disc. Seeds</span><span id="hud-disconnected" class="hud-value">0</span></div>
+        <div class="hud-item"><span class="hud-label">Disc. Anchors</span><span id="hud-disconnected-anchors" class="hud-value">0</span></div>
+        <div class="hud-item"><span class="hud-label">Unstable</span><span id="hud-unstable" class="hud-value">0</span></div>
+      </div>
+    </section>
+
+    <aside id="sidebar">
+      <section id="play-panel" class="panel-block">
+        <div class="panel-title">Rules</div>
+        <div class="legend-list">
+          <div class="legend-row"><span class="swatch water">≈</span><b>Water</b><span>needs active forest</span></div>
+          <div class="legend-row"><span class="swatch forest">▲</span><b>Forest</b><span>needs active plains</span></div>
+          <div class="legend-row"><span class="swatch plains">III</span><b>Plains</b><span>needs active water</span></div>
+          <div class="legend-row"><span class="swatch seed"></span><b>Seed</b><span>always active</span></div>
+          <div class="legend-row"><span class="swatch link"></span><b>Link</b><span>adjacent cells must match</span></div>
+          <div class="legend-row"><span class="swatch negative-link">x</span><b>Negative Link</b><span>exactly one linked cell stays on</span></div>
+          <div class="legend-row"><span class="swatch min-hint">2+</span><b>At Least Hint</b><span>active cell needs at least N enablers</span></div>
+        </div>
+        <div class="button-stack top-gap">
+          <button id="toggle-rule-focus-btn" class="btn">Enabler Highlight: Off</button>
+        </div>
+      </section>
+
+      <section id="status-panel" class="panel-block">
+        <div class="panel-title secondary">Status</div>
+        <div id="status" class="status-box">Choose a level.</div>
+      </section>
+    </aside>
+  </main>
+
+</body>
+</html>

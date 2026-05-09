@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breath Connection Demo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/breath-connection/assets/demo-s8qqrpEE.js"></script>
-  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-B2w7xnxx.css">
+  <script type="module" crossorigin src="/breath-connection/assets/demo-smAwo_2g.js"></script>
+  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-BqBRJmiQ.css">
 </head>
-<body data-mode="play" data-app="demo">
+<body data-mode="play" data-app="demo" data-demo-screen="menu">
   <header id="topbar">
     <div class="brand">
       <span class="title">Breath Connection</span>
@@ -16,8 +16,10 @@
     </div>
 
     <div class="top-controls">
-      <select id="level-select" class="level-select"></select>
+      <span id="demo-level-label" class="demo-level-label">Level 1</span>
+      <button id="home-btn" class="btn slim">Home</button>
       <button id="reset-btn" class="btn slim">Reset</button>
+      <button id="mute-btn" class="btn slim">Sound On</button>
       <div class="hex-size-group">
         <button class="hex-preset-btn" data-hex-preset="S">S</button>
         <button class="hex-preset-btn active" data-hex-preset="M">M</button>
@@ -27,6 +29,20 @@
 
     <div id="victory-banner" hidden>All seeds connected</div>
   </header>
+
+  <section id="demo-menu" class="demo-screen">
+    <div class="demo-menu-card">
+      <div class="demo-kicker">Prototype Demo</div>
+      <h1>Breath Connection</h1>
+      <p class="demo-menu-copy">Connect the seeds. Let the rules teach the rest.</p>
+      <div id="demo-level-grid" class="demo-level-grid" aria-label="Demo levels"></div>
+      <div class="demo-menu-actions">
+        <button id="menu-mute-btn" class="btn">Sound On</button>
+        <button id="reset-progress-btn" class="btn danger">Reset Progress</button>
+      </div>
+      <p id="demo-menu-status" class="demo-menu-status"></p>
+    </div>
+  </section>
 
   <main id="main" class="demo-main">
     <section id="canvas-wrap">
@@ -69,6 +85,17 @@
       </section>
     </aside>
   </main>
+
+  <section id="completion-overlay" class="completion-overlay" hidden>
+    <div class="completion-card">
+      <div class="demo-kicker">Level Complete</div>
+      <h2 id="completion-title">Solved</h2>
+      <div class="completion-actions">
+        <button id="next-level-btn" class="btn primary">Next Level</button>
+        <button id="completion-menu-btn" class="btn">Back To Menu</button>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>

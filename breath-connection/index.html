@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breath Connection Demo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/breath-connection/assets/demo-BrEOWCCB.js"></script>
-  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-BqBRJmiQ.css">
+  <script type="module" crossorigin src="/breath-connection/assets/demo-8VuHfc52.js"></script>
+  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-C3ZAFXCl.css">
 </head>
 <body data-mode="play" data-app="demo" data-demo-screen="menu">
   <header id="topbar">
@@ -39,6 +39,7 @@
       <div class="demo-menu-actions">
         <button id="feedback-btn" class="btn">Send Feedback</button>
         <button id="menu-mute-btn" class="btn">Sound On</button>
+        <button id="unlock-all-levels-btn" class="btn">Unlock All Levels</button>
         <button id="reset-progress-btn" class="btn danger">Reset Progress</button>
       </div>
       <p id="demo-menu-status" class="demo-menu-status"></p>
@@ -65,24 +66,27 @@
 
     <aside id="sidebar">
       <section id="play-panel" class="panel-block">
-        <div class="panel-title">Rules</div>
-        <div class="legend-list">
-          <div class="legend-row"><span class="swatch water">≈</span><b>Water</b><span>needs active forest</span></div>
-          <div class="legend-row"><span class="swatch forest">▲</span><b>Forest</b><span>needs active plains</span></div>
-          <div class="legend-row"><span class="swatch plains">III</span><b>Plains</b><span>needs active water</span></div>
-          <div class="legend-row"><span class="swatch seed"></span><b>Seed</b><span>always active</span></div>
-          <div class="legend-row"><span class="swatch link"></span><b>Link</b><span>adjacent cells must match</span></div>
-          <div class="legend-row"><span class="swatch negative-link">x</span><b>Negative Link</b><span>exactly one linked cell stays on</span></div>
-          <div class="legend-row"><span class="swatch min-hint">2+</span><b>At Least Hint</b><span>active cell needs at least N enablers</span></div>
-        </div>
-        <div class="button-stack top-gap">
+        <div class="panel-title">Controls</div>
+        <div class="button-stack">
           <button id="toggle-rule-focus-btn" class="btn">Enabler Highlight: Off</button>
         </div>
-      </section>
-
-      <section id="status-panel" class="panel-block">
-        <div class="panel-title secondary">Status</div>
-        <div id="status" class="status-box">Choose a level.</div>
+        <div class="control-list" aria-label="Mouse controls">
+          <div class="control-row"><kbd>Left click</kbd><span>Activate / deactivate cell</span></div>
+          <div class="control-row"><kbd>Right click</kbd><span>Disable cell</span></div>
+          <div class="control-row"><kbd>Mouse wheel</kbd><span>Zoom</span></div>
+        </div>
+        <div class="panel-divider" aria-hidden="true"></div>
+        <div class="panel-title">Rules</div>
+        <div class="legend-list">
+          <div class="legend-row"><span class="swatch water">≈</span><b>Water</b></div>
+          <div class="legend-row"><span class="swatch forest">▲</span><b>Forest</b></div>
+          <div class="legend-row"><span class="swatch plains">III</span><b>Plains</b></div>
+          <div class="legend-row"><span class="swatch seed"></span><b>Seed</b></div>
+          <div class="legend-row"><span class="swatch link"></span><b>Link</b></div>
+          <div class="legend-row"><span class="swatch negative-link">x</span><b>Negative Link</b></div>
+          <div class="legend-row"><span class="swatch anchor" aria-hidden="true"></span><b>Anchor</b></div>
+          <div class="legend-row"><span class="swatch territory">◈</span><b>Territories</b></div>
+        </div>
       </section>
     </aside>
   </main>
@@ -94,6 +98,30 @@
       <div class="completion-actions">
         <button id="next-level-btn" class="btn primary">Next Level</button>
         <button id="completion-menu-btn" class="btn">Back To Menu</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="home-confirm-overlay" class="completion-overlay" role="dialog" aria-modal="true" aria-labelledby="home-confirm-title" aria-describedby="home-confirm-copy" hidden>
+    <div class="home-confirm-card">
+      <div class="demo-kicker">Leave Level?</div>
+      <h2 id="home-confirm-title">Return to Menu</h2>
+      <p id="home-confirm-copy" class="home-confirm-copy">Your current progress in this level will be lost.</p>
+      <div class="home-confirm-actions">
+        <button id="home-confirm-btn" class="btn danger">Confirm</button>
+        <button id="home-confirm-back-btn" class="btn">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="unlock-all-overlay" class="completion-overlay" role="dialog" aria-modal="true" aria-labelledby="unlock-all-title" aria-describedby="unlock-all-copy" hidden>
+    <div class="home-confirm-card">
+      <div class="demo-kicker">Unlock All Levels?</div>
+      <h2 id="unlock-all-title">Play Out of Order</h2>
+      <p id="unlock-all-copy" class="home-confirm-copy">This game is intended to be played in order. Unlocking all levels lets you select any available level immediately.</p>
+      <div class="home-confirm-actions">
+        <button id="unlock-all-confirm-btn" class="btn danger">Confirm</button>
+        <button id="unlock-all-back-btn" class="btn">Back</button>
       </div>
     </div>
   </section>

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Breath Connection Demo</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/breath-connection/assets/demo-8VuHfc52.js"></script>
-  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-C3ZAFXCl.css">
+  <script type="module" crossorigin src="/breath-connection/assets/demo-BrZuxXrg.js"></script>
+  <link rel="stylesheet" crossorigin href="/breath-connection/assets/demo-B_be8KEx.css">
 </head>
 <body data-mode="play" data-app="demo" data-demo-screen="menu">
   <header id="topbar">
@@ -19,6 +19,9 @@
       <span id="demo-level-label" class="demo-level-label">Level 1</span>
       <button id="home-btn" class="btn slim">Home</button>
       <button id="reset-btn" class="btn slim">Reset</button>
+      <span class="feedback-tooltip-wrap" data-tooltip="Only one submission is accepted. Please send feedback once you have finished the game.">
+        <button id="level-feedback-btn" class="btn slim feedback-btn" aria-label="Send feedback. Only one submission is accepted after you finish the game." hidden>Feedback</button>
+      </span>
       <button id="mute-btn" class="btn slim">Sound On</button>
       <div class="hex-size-group">
         <button class="hex-preset-btn" data-hex-preset="S">S</button>
@@ -37,7 +40,9 @@
       <p class="demo-menu-copy">Connect the seeds. Let the rules teach the rest.</p>
       <div id="demo-level-grid" class="demo-level-grid" aria-label="Demo levels"></div>
       <div class="demo-menu-actions">
-        <button id="feedback-btn" class="btn">Send Feedback</button>
+        <span class="feedback-tooltip-wrap" data-tooltip="Only one submission is accepted. Please send feedback once you have finished the game.">
+          <button id="feedback-btn" class="btn feedback-btn" aria-label="Send feedback. Only one submission is accepted after you finish the game.">Send Feedback</button>
+        </span>
         <button id="menu-mute-btn" class="btn">Sound On</button>
         <button id="unlock-all-levels-btn" class="btn">Unlock All Levels</button>
         <button id="reset-progress-btn" class="btn danger">Reset Progress</button>
